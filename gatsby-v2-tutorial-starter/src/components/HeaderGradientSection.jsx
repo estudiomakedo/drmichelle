@@ -5,19 +5,21 @@ import PropTypes from 'prop-types';
 import GoogleFontLoader from 'react-google-font-loader';
 
 import cover from '../../static/photos/cover.jpeg'
+import green from '../../static/green.png'
+import blue from '../../static/blue.png'
 import RoundButton from './RoundButton';
 
 
 const Wrapper = styled.header`
   height: 100vh;
   background: url(${cover}) 90% 150% no-repeat;
-  background-size: 300px;
+  background-size: 450px;
   margin: 0 auto;
   max-width: ${props => props.theme.maxWidth};
 
   @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
-    background: url(${cover}) 90% 200% no-repeat;
-    background-size: 400px;
+    background: url(${cover}) 70% 200% no-repeat;
+    background-size: 450px;
   }
 
   @media screen and (min-width: ${props => props.theme.breakpoints.m}) {
@@ -26,7 +28,7 @@ const Wrapper = styled.header`
   }
 
   @media screen and (min-width: ${props => props.theme.breakpoints.l}) and (max-width: ${props => props.theme.breakpoints.lx}) {
-    background: url(${cover}) 90% 10vh no-repeat;
+    background: url(${cover}) 90% -8vh no-repeat;
     background-size: 650px;
   }
 
@@ -104,7 +106,7 @@ font-family: Lato;
 line-height: 1.2;
 
 @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
-  font-size: 60px;
+  font-size: 50px;
   text-align: left;
   width: 90%;
   align-self: flex-start;
@@ -112,21 +114,21 @@ line-height: 1.2;
 }
 
 @media screen and (min-width: ${props => props.theme.breakpoints.m}) and (max-width: ${props => props.theme.breakpoints.l}) {
-  font-size: 75px;
+  font-size: 60px;
   text-align: left;
   width: 100%;
 
 }
 
 @media screen and (min-width: ${props => props.theme.breakpoints.l}) and (max-width: ${props => props.theme.breakpoints.lx}) {
-  font-size: 85px;
+  font-size: 65px;
   text-align: left;
   width: 100%;
 
 }
 
 @media screen and (min-width: ${props => props.theme.breakpoints.lx}) {
-  font-size: 85px;
+  font-size: 70px;
   text-align: left;
   width: 90%;
 
@@ -135,6 +137,21 @@ line-height: 1.2;
 
 const ImgFixed = styled.img`
   width: 300px
+`;
+
+const ImgGreen = styled.img`
+  max-width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+const ImgBlue = styled.img`
+  max-width: 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
 `;
 
 const HeaderGradientSection = ({ children, title, date }) => (
@@ -148,11 +165,14 @@ const HeaderGradientSection = ({ children, title, date }) => (
           ]}
       />
     {/*<ImgFixed src={cover} />*/}
+    <ImgGreen src={green} />
+    <ImgBlue src={blue} />
+
     <Text>
       <PositiveMessage>Medicina</PositiveMessage>
       <PositiveMessage>Preventiva,</PositiveMessage> 
       <PositiveMessage>Emagrecimento e</PositiveMessage> 
-      <PositiveMessage>Preventiva, Longevidade Saudável</PositiveMessage>
+      <PositiveMessage>Longevidade Saudável</PositiveMessage>
       <RoundButton text="CONHEÇA" />
     </Text>
       {children && <Subtitle>{children}</Subtitle>}
