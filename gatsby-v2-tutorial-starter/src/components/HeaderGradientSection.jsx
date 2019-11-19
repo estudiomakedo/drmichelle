@@ -32,8 +32,8 @@ const Wrapper = styled.header`
 
   
   @media screen and (min-width: ${props => props.theme.breakpoints.lx}) {
-    background: url(${cover}) 100% 10vh no-repeat;
-    background-size: 650px;
+    background: url(${cover}) 100% -14vh no-repeat;
+    background-size: 700px;
   }
 
   &:before {
@@ -150,7 +150,9 @@ const HeaderGradientSection = ({ children, title, date }) => (
     {/*<ImgFixed src={cover} />*/}
     <Text>
       <PositiveMessage>Medicina</PositiveMessage>
-      <PositiveMessage>Preventiva, Emagrecimento e Longevidade Saudável</PositiveMessage>
+      <PositiveMessage>Preventiva,</PositiveMessage> 
+      <PositiveMessage>Emagrecimento e</PositiveMessage> 
+      <PositiveMessage>Preventiva, Longevidade Saudável</PositiveMessage>
       <RoundButton text="CONHEÇA" />
     </Text>
       {children && <Subtitle>{children}</Subtitle>}
