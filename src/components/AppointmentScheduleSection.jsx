@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
-import GoogleFontLoader from 'react-google-font-loader';
+//import GoogleFontLoader from 'react-google-font-loader';
 
 import SectionTitle from './SectionTitle';
 import BodyText from './BodyText';
@@ -32,14 +32,14 @@ const CollumnText = styled.div`
 
 const HeaderGradientSection = ({ children, title, date }) => (
   <Wrapper>
-    <GoogleFontLoader
+    {/*<GoogleFontLoader
           fonts={[
               {
                   font: 'Lato',
                   weights: [300, 400, 600],
               },
           ]}
-      />
+        />*/}
     
     <Row>
       <CollumnText>
