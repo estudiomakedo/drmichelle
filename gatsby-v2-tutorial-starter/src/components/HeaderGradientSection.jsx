@@ -8,6 +8,8 @@ import cover from '../../static/photos/cover.jpeg'
 import green from '../../static/green.png'
 import blue from '../../static/blue.png'
 import RoundButton from './RoundButton';
+import logo from '../../static/logo/header-logo.png';
+import { Link } from 'gatsby';
 
 
 const Wrapper = styled.header`
@@ -140,19 +142,47 @@ const ImgFixed = styled.img`
 `;
 
 const ImgGreen = styled.img`
-  max-width: 150px;
   position: absolute;
   top: 0;
   left: 0;
+  max-width: 50px;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    max-width: 100px;
+  }
+  @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
+    max-width: 150px;
+  }
 `;
 
 const ImgBlue = styled.img`
-  max-width: 150px;
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 0;
+  max-width: 50px;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    max-width: 100px;
+  }
+  @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
+    max-width: 150px;
+  }
 `;
+
+const StyledLink = styled(Link)`
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    justify-content: flex-end;
+  }
+
+`;
+
+const Logo = styled.img`
+  max-width: 330px;
+`;
+
 
 const HeaderGradientSection = ({ children, title, date }) => (
   <Wrapper>
@@ -175,6 +205,10 @@ const HeaderGradientSection = ({ children, title, date }) => (
       <PositiveMessage>Longevidade Saudável</PositiveMessage>
       <RoundButton text="CONHEÇA" />
     </Text>
+
+    <StyledLink to="/">
+      <Logo src={logo} alt="Gatsby Logo" />
+    </StyledLink>
       {children && <Subtitle>{children}</Subtitle>}
     
   </Wrapper>

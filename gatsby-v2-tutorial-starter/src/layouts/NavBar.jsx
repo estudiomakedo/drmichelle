@@ -32,16 +32,14 @@ const Logo = styled.img`
 `;
 
 const NavBar = () => (
-  <Headroom calcHeightOnResize disableInlineStyles>
+  /*<Headroom calcHeightOnResize disableInlineStyles>
     <Nav>
       <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link>
-      {/*<Link to="/about">About</Link>*/}
     </Nav>
-    <StyledLink to="/">
-      <Logo src={logo} alt="Gatsby Logo" />
-    </StyledLink>
-  </Headroom>
+    
+  </Headroom>*/
+  <div></div>
 );
 
 export default NavBar;

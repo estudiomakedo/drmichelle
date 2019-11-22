@@ -3,7 +3,11 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
-import { HeaderGradientSection, PostList } from 'components';
+import {  HeaderGradientSection, 
+          SimplePostList, 
+          AppointmentScheduleSection, 
+          OurSpecialitySection,
+          SectionTitle } from 'components';
 import { Layout } from 'layouts';
 
 const PostWrapper = styled.div`
@@ -11,12 +15,20 @@ const PostWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 4rem 4rem 1rem 4rem;
+
+`;
+
+const PostContainer = styled.div`
+  background: #FAFFEC;
+  width: 100%;
+  padding: 4rem 4rem 1rem 4rem;
+  max-width: ${props => props.theme.maxWidth};
+
   @media (max-width: 1000px) {
-    margin: 4rem 2rem 1rem 2rem;
+    padding: 4rem 2rem 1rem 2rem;
   }
   @media (max-width: 700px) {
-    margin: 4rem 1rem 1rem 1rem;
+    padding: 4rem 1rem 1rem 1rem;
   }
 `;
 
@@ -25,29 +37,33 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Helmet title={'Home Page'} />
-      <HeaderGradientSection>Gatsby Tutorial Starter oi</HeaderGradientSection>
+      <HeaderGradientSection />
+      <AppointmentScheduleSection />
+      <OurSpecialitySection />
       {/*Gradient first section*/}
       {/*Gradient first section*/}
 
 
-
-      <PostWrapper>
-        {edges.map(({ node }) => {
-          const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
-          return (
-            <PostList
-              key={id}
-              cover={cover.childImageSharp.fluid}
-              path={path}
-              title={title}
-              date={date}
-              excerpt={excerpt}
-            />
-          );
-        })}
-      </PostWrapper>
-    </Layout>
+      <PostContainer>
+        <SectionTitle maxSize="1.8rem" text="Acompanhe os nossos últimos posts" />
+        <PostWrapper>
+          {edges.map(({ node }) => {
+            const { id, excerpt, frontmatter } = node;
+            const { cover, path, title, date } = frontmatter;
+            return (
+              <SimplePostList
+                key={id}
+                cover={cover.childImageSharp.fluid}
+                path={path}
+                title={title}
+                date={date}
+                excerpt={excerpt}
+              />
+            );
+          })}
+        </PostWrapper>
+      </PostContainer>
+  </Layout>
   );
 };
 
@@ -77,7 +93,7 @@ Index.propTypes = {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      limit: 6
+      limit: 3
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
