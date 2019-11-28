@@ -121,8 +121,10 @@ const CardButton = styled.div`
   text-align: center;
   color: #fff;
   padding: 0.3rem;
-  margin: 0 10px;
+  margin: 0 auto;
   font-weight: 300;
+  max-width: 150px;
+
 `;
 
 
@@ -147,7 +149,7 @@ const OurSpecialitySection = ({ children, title, date }) => (
             </CardBall>
             <CardTitle>Especialidade</CardTitle>
             <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-            <CardButton bgColor={theme.colors.primary.base}>Quero saber mais porra</CardButton>
+            <CardButton bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
           </Card>
           <Card>
             <CardBall bgColor={theme.colors.secondary.base}>
@@ -155,7 +157,7 @@ const OurSpecialitySection = ({ children, title, date }) => (
             </CardBall>
             <CardTitle>Especialidade</CardTitle>
             <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-            <CardButton bgColor={theme.colors.secondary.base}>Quero saber mais porra</CardButton>
+            <CardButton bgColor={theme.colors.secondary.base}>Quero saber</CardButton>
           </Card>
           <Card>
             <CardBall bgColor={theme.colors.primary.base}>
@@ -163,7 +165,7 @@ const OurSpecialitySection = ({ children, title, date }) => (
             </CardBall>
             <CardTitle>Especialidade</CardTitle>
             <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-            <CardButton bgColor={theme.colors.primary.base}>Quero saber mais porra</CardButton>
+            <CardButton bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
           </Card>
         </CardRow>
       </CollumnText>

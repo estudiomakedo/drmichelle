@@ -94,7 +94,8 @@ const Image = styled.div`
 `;
 
 const Info = styled.div`
-  color: ${props => props.theme.colors.white.light};
+  color: #707070;
+  font-family: Lato;
   margin: 0 1rem 1.25rem 1.25rem;
   position: absolute;
   bottom: 0;

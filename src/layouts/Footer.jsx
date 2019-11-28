@@ -1,35 +1,31 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import footerImg from '../../static/footer.png';
+import {SectionTitle} from '../components';
 
 const Wrapper = styled.footer`
-  position: relative;
-  padding-top: 2rem;
-  bottom: 0;
-  box-shadow: ${props => props.theme.shadow.footer};
-  background: ${props => props.theme.gradient.leftToRight};
-  font-family: ${props => props.theme.fontFamily.body};
-  font-weight: 500;
-  @media (max-width: ${props => props.theme.breakpoints.s}) {
-    padding-top: 7rem;
-  }
+  display: flex;
+  jusitfy-content: space-between;
+  background: linear-gradient(113deg, #E9E9E9 0%, #FFFFFF 100%) 0% 0% no-repeat;
 `;
 
-const Text = styled.div`
+const ContactContainer = styled.div`
+  padding: 4rem 3rem 1rem;
+  width: 50%;
+`;
+
+const FooterImg = styled.img`
   margin: 0;
-  padding-bottom: 2rem;
-  text-align: center;
-  color: ${props => props.theme.colors.white.light};
+  max-width: 56%;
 `;
 
 const Footer = () => (
-  /*<Wrapper>
-    <Text>
-      <span>
-        Gatsby Tutorial Starter -{' '}
-        <a href="https://justinformentin.com">Justin Formentin</a>
-      </span>
-    </Text>
-  </Wrapper>*/
-  <div></div>
+  <Wrapper>
+    <ContactContainer>
+      <SectionTitle maxSize="1.8rem" text="Dúvidas? Fale comigo"  />
+
+    </ContactContainer>
+    <FooterImg src={footerImg} />
+  </Wrapper>
 );
 export default Footer;

@@ -7,8 +7,8 @@ import {  HeaderGradientSection,
           SimplePostList, 
           AppointmentScheduleSection, 
           OurSpecialitySection,
-          SectionTitle } from 'components';
-import { Layout } from 'layouts';
+          SectionTitle, RoundButton } from 'components';
+import { Layout, ClientComments } from 'layouts';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -40,9 +40,6 @@ const Index = ({ data }) => {
       <HeaderGradientSection />
       <AppointmentScheduleSection />
       <OurSpecialitySection />
-      {/*Gradient first section*/}
-      {/*Gradient first section*/}
-
 
       <PostContainer>
         <SectionTitle maxSize="1.8rem" text="Acompanhe os nossos últimos posts" />
@@ -62,7 +59,10 @@ const Index = ({ data }) => {
             );
           })}
         </PostWrapper>
+        <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
       </PostContainer>
+
+      <ClientComments />
   </Layout>
   );
 };

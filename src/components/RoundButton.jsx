@@ -16,9 +16,9 @@ export default class RoundButton extends React.Component {
   }
 
     render() {
-      const {text} = this.props;
+      const {text, styles} = this.props;
       return (
-        <Container>
+        <Container style={{...styles}}>
           <Text>{text}</Text>
         </Container>
       );
@@ -27,6 +27,7 @@ export default class RoundButton extends React.Component {
   
   RoundButton.defaultProps = {
     text:'',
+    styles: {}
   };
 
 const Container = styled.div`
