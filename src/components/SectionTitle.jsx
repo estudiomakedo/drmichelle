@@ -16,16 +16,17 @@ export default class SectionTitle extends React.Component {
   }
 
     render() {
-      const {text, maxSize} = this.props;
+      const {text, maxSize, styles} = this.props;
       return (
-          <Text maxSize={maxSize}>{text}</Text>
+          <Text style={{...styles}} maxSize={maxSize}>{text}</Text>
       );
     }
   }
   
   SectionTitle.defaultProps = {
     text:'',
-    maxSize: "3.2rem"
+    maxSize: "3.2rem",
+    styles:{}
   };
 
 const Text = styled.h2`

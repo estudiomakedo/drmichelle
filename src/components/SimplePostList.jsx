@@ -40,10 +40,11 @@ const StyledLink = styled(Link)`
 const Info = styled.div`
   color: #707070;
   font-family: Lato;
-  margin: 0 1rem 1.25rem 1.25rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  margin: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-around;
 `;
 
 const Title = styled.h2`

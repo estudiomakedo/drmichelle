@@ -10,6 +10,7 @@ import AppointmentScheduleSection from './AppointmentScheduleSection';
 import OurSpecialitySection from './OurSpecialitySection';
 import SectionTitle from './SectionTitle';
 import BodyText from './BodyText';
+import CommentCard from './CommentCard';
 
 export { 
     BlogList, 
@@ -23,5 +24,6 @@ export {
     OurSpecialitySection,
     SectionTitle,
     BodyText,
-    SimplePostList
+    SimplePostList,
+    CommentCard
 };
