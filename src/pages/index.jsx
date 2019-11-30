@@ -8,7 +8,7 @@ import {  HeaderGradientSection,
           AppointmentScheduleSection, 
           OurSpecialitySection,
           SectionTitle, RoundButton } from 'components';
-import { Layout, ClientComments } from 'layouts';
+import { Layout, ClientComments, ContactSection } from 'layouts';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -63,6 +63,7 @@ const Index = ({ data }) => {
       </PostContainer>
 
       <ClientComments />
+      <ContactSection />
   </Layout>
   );
 };

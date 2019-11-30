@@ -21,11 +21,7 @@ const FooterImg = styled.img`
 
 const Footer = () => (
   <Wrapper>
-    <ContactContainer>
-      <SectionTitle maxSize="1.8rem" text="Dúvidas? Fale comigo"  />
 
-    </ContactContainer>
-    <FooterImg src={footerImg} />
   </Wrapper>
 );
 export default Footer;

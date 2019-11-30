@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import Theme from '../../config/theme';
 import ReactDOM from 'react-dom';
-import image2 from '../../static/image 2.png';
+import image2 from '../../static/image2.png';
 import star from '../../static/star.svg'
 
 export default class CommentCard extends React.Component {
