@@ -20,6 +20,7 @@ const Row = styled.div`
   display: flex;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
+  flex-wrap: wrap;
 `;
 
 const CollumnText = styled.div`

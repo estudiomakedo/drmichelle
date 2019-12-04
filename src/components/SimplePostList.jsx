@@ -72,7 +72,7 @@ const SeeMore = styled.span`
 `;
 
 const PostList = ({ cover, path, date, title, excerpt }) => (
-    <StyledLink> {/*to={path}>*/}
+    <StyledLink to={path}>
       <Info>
         <Title>{title}</Title>
         <Excerpt>{excerpt}</Excerpt>

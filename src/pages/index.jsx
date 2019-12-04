@@ -18,9 +18,14 @@ const PostWrapper = styled.div`
 
 `;
 
-const PostContainer = styled.div`
+const PostOuterContainer = styled.div`
   background: #FAFFEC;
   width: 100%;
+`;
+
+const PostContainer = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
   padding: 4rem 4rem 1rem 4rem;
   max-width: ${props => props.theme.maxWidth};
 
@@ -40,27 +45,29 @@ const Index = ({ data }) => {
       <HeaderGradientSection />
       <AppointmentScheduleSection />
       <OurSpecialitySection />
-
-      <PostContainer>
-        <SectionTitle maxSize="1.8rem" text="Acompanhe os nossos últimos posts" />
-        <PostWrapper>
-          {edges.map(({ node }) => {
-            const { id, excerpt, frontmatter } = node;
-            const { cover, path, title, date } = frontmatter;
-            return (
-              <SimplePostList
-                key={id}
-                cover={cover.childImageSharp.fluid}
-                path={path}
-                title={title}
-                date={date}
-                excerpt={excerpt}
-              />
-            );
-          })}
-        </PostWrapper>
-        <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
-      </PostContainer>
+      
+      <PostOuterContainer>
+        <PostContainer>
+          <SectionTitle maxSize="1.8rem" text="Acompanhe os nossos últimos posts" />
+          <PostWrapper>
+            {edges.map(({ node }) => {
+              const { id, excerpt, frontmatter } = node;
+              const { cover, path, title, date } = frontmatter;
+              return (
+                <SimplePostList
+                  key={id}
+                  cover={cover.childImageSharp.fluid}
+                  path={path}
+                  title={title}
+                  date={date}
+                  excerpt={excerpt}
+                />
+              );
+            })}
+          </PostWrapper>
+          <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
+        </PostContainer>
+      </PostOuterContainer>
 
       <ClientComments />
       <ContactSection />

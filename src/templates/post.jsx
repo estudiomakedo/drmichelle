@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
-import { TagsBlock, Header, SEO } from 'components';
+import { TagsBlock, PostHeaderFull, SEO } from 'components';
 import '../styles/prism';
 
 const SuggestionBar = styled.div`
@@ -17,6 +17,10 @@ const PostSuggestion = styled.div`
   display: flex;
   align-items: center;
   margin: 1rem 3rem 0 3rem;
+`;
+
+const PostContainer = styled.div`
+background-color: ${props => props.theme.colors.white.base};
 `;
 
 const Post = ({ data, pageContext }) => {
@@ -34,11 +38,14 @@ const Post = ({ data, pageContext }) => {
         pathname={path}
         article
       />
-      <Header title={title} date={date} cover={image} />
-      <Container>
-        <Content input={html} />
-        <TagsBlock list={tags || []} />
-      </Container>
+      <PostHeaderFull title={title} subtitle={title} date={date} image={image} />
+      <PostContainer>
+        <Container>
+          <Content input={html} />
+          <TagsBlock list={tags || []} />
+        </Container>
+      </PostContainer>
+      
       <SuggestionBar>
         <PostSuggestion>
           {prev && (

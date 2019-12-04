@@ -6,26 +6,40 @@ import phone from '../../static/phone.png';
 import {SectionTitle} from '../components';
 
 const Wrapper = styled.section`
-  display: flex;
-  jusitfy-content: space-between;
   background: linear-gradient(113deg, #E9E9E9 0%, #FFFFFF 100%) 0% 0% no-repeat;
+`;
+
+const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: ${props => props.theme.maxWidth};
 `;
 
 const ContactContainer = styled.div`
   padding: 4rem 3rem 1rem;
-  width: 50%;
+  width: 100%;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    padding: 1;
+    width: 80%;
+  }
+  @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
+    width: 70%;
+  }
 `;
 
 const FooterImg = styled.img`
   margin: 0;
-  max-width: 56%;
+  max-width: 46%;
+  right: 0;
+  position: relative
 `;
 
 
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  margin: 0.7rem 0;
+  margin: 1rem 0;
 `;
 
 const ContactText = styled.p`
@@ -36,27 +50,63 @@ const ContactText = styled.p`
 
 const Icon = styled.img`
   margin: 0;
-  max-width: 70px;
+  max-width: 35px;
+`;
+
+const MapsContainer = styled.div`
+  margin-top : 1rem;
+  background-color: #0282A0;
+  border: 4px solid #0282A0;
+  border-radius: 3px 3px 10px 10px;
+  max-width: 600px;
+`;
+
+const Address = styled.p`
+  margin: 5px 0 5px 1rem;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+`;
+
+const ImageContainer = styled.div`
+  background: url(${footerImg}) 100% 5% no-repeat;
+  background-size: cover;
+  background-position: center 50%;
+  width: 50%;
+  @media screen and (max-width:  768px){
+    display: none;
+  }
 `;
 
 const ContactSection = () => (
   <Wrapper>
-    <ContactContainer>
-      <SectionTitle maxSize="1.8rem" text="Dúvidas? Fale comigo"  />
-      <ContactItem>
-        <Icon src={email} />
-        <ContactText>
-          contato@drmichelle.com.br
-        </ContactText>
-      </ContactItem>
-      <ContactItem>
-        <Icon src={phone} />
-        <ContactText>
-          (11) 9999-9999
-        </ContactText>
-      </ContactItem>
-    </ContactContainer>
-    <FooterImg src={footerImg} />
+    <Row>
+      <ContactContainer>
+        <SectionTitle maxSize="1.8rem" text="Dúvidas? Fale comigo"  />
+        <ContactItem>
+          <Icon src={email} />
+          <ContactText>
+            contato@drmichelle.com.br
+          </ContactText>
+        </ContactItem>
+        <ContactItem>
+          <Icon src={phone} />
+          <ContactText>
+            (11) 9999-9999
+          </ContactText>
+        </ContactItem>
+        <MapsContainer>
+          <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
+            frameborder="0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=adolfomonteiro+campoformoso+BA" allowfullscreen>
+          </iframe>
+          <Address>Rua x, numero 20 - SP</Address>
+        </MapsContainer>
+      </ContactContainer>
+      <ImageContainer>
+        {/*<FooterImg src={footerImg} />*/}
+      </ImageContainer>
+    </Row>
   </Wrapper>
 );
 export default ContactSection;

@@ -32,14 +32,13 @@ const Logo = styled.img`
 `;
 
 const NavBar = () => (
-  /*<Headroom calcHeightOnResize disableInlineStyles>
+  <Headroom calcHeightOnResize disableInlineStyles>
     <Nav>
       <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link>
     </Nav>
     
-  </Headroom>*/
-  <div></div>
+  </Headroom>
 );
 
 export default NavBar;

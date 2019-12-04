@@ -11,15 +11,15 @@ export const colors = {
     blue: '#2e3246',
   },
   primary: {
-    base: '#94C128',
-    light: '#9EBD46',
-    dark: '#94C128',
+    base: '#00a09a',
+    light: '#00d3cb',
+    dark: '#006d69',
   },
   secondary: {
-    base: "#32A9E1",
-    light: "#5C9CBA",
-    dark: "#32A9E1",
-    lighter: "#F0F9FF",
+    base: "#2258a2",
+    light: "#2b6fcc",
+    dark: "#194178",
+    lighter: "rgba(34,88,162,0.1)",
   },
   background: {
     light: '#3e5fbc',

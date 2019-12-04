@@ -195,8 +195,8 @@ const HeaderGradientSection = ({ children, title, date }) => (
           ]}
         />*/}
     {/*<ImgFixed src={cover} />*/}
-    <ImgGreen src={green} />
-    <ImgBlue src={blue} />
+    {/*<ImgGreen src={green} />
+    <ImgBlue src={blue} />*/}
 
     <Text>
       <PositiveMessage>Medicina</PositiveMessage>

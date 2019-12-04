@@ -11,6 +11,7 @@ import OurSpecialitySection from './OurSpecialitySection';
 import SectionTitle from './SectionTitle';
 import BodyText from './BodyText';
 import CommentCard from './CommentCard';
+import PostHeaderFull from './PostHeaderFull';
 
 export { 
     BlogList, 
@@ -25,5 +26,6 @@ export {
     SectionTitle,
     BodyText,
     SimplePostList,
-    CommentCard
+    CommentCard,
+    PostHeaderFull
 };
