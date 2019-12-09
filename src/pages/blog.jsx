@@ -2,17 +2,17 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Header, BlogList } from 'components';
-import { Layout } from 'layouts';
+import { HeaderGradientMiddleSection, BlogListSide } from 'components';
+import { Layout, ContactSection } from 'layouts';
 
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <Helmet title={'Blog Page'} />
-      <Header title="Blog Page">Gatsby Tutorial Starter</Header>
+      <HeaderGradientMiddleSection title="Blog"></HeaderGradientMiddleSection>
       {edges.map(({ node }) => (
-        <BlogList
+        <BlogListSide
           key={node.id}
           cover={node.frontmatter.cover.childImageSharp.fluid}
           path={node.frontmatter.path}

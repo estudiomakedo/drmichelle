@@ -1,6 +1,8 @@
 import BlogList from './BlogList';
+import BlogListSide from './BlogListSide';
 import Header from './Header';
 import HeaderGradientSection from './HeaderGradientSection';
+import HeaderGradientMiddleSection from './HeaderGradientMiddleSection';
 import RoundButton from './RoundButton';
 import PostList from './PostList';
 import SimplePostList from './SimplePostList';
@@ -15,11 +17,13 @@ import PostHeaderFull from './PostHeaderFull';
 
 export { 
     BlogList, 
+    BlogListSide,
     Header, 
     PostList, 
     SEO, 
     TagsBlock, 
     HeaderGradientSection, 
+    HeaderGradientMiddleSection,
     RoundButton, 
     AppointmentScheduleSection,
     OurSpecialitySection,

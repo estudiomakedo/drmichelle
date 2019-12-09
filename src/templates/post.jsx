@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
 import { TagsBlock, PostHeaderFull, SEO } from 'components';
 import '../styles/prism';
+import Theme from '../../config/theme';
 
 const SuggestionBar = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: ${props => props.theme.colors.white.light};
+  background: #FAFFEC;
   box-shadow: ${props => props.theme.shadow.suggestion};
 `;
 const PostSuggestion = styled.div`
@@ -22,6 +23,12 @@ const PostSuggestion = styled.div`
 const PostContainer = styled.div`
 background-color: ${props => props.theme.colors.white.base};
 `;
+
+
+const LinkStyles = {
+  color: Theme.colors.secondary.base
+}
+
 
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
@@ -49,16 +56,16 @@ const Post = ({ data, pageContext }) => {
       <SuggestionBar>
         <PostSuggestion>
           {prev && (
-            <Link to={prev.frontmatter.path}>
-              Previous
+            <Link style={{...LinkStyles}} to={prev.frontmatter.path}>
+              Anterior
               <h3>{prev.frontmatter.title}</h3>
             </Link>
           )}
         </PostSuggestion>
         <PostSuggestion>
           {next && (
-            <Link to={next.frontmatter.path}>
-              Next
+            <Link style={{...LinkStyles}} to={next.frontmatter.path}>
+              Próximo
               <h3>{next.frontmatter.title}</h3>
             </Link>
           )}

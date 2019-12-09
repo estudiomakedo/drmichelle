@@ -39,8 +39,7 @@ const CollumnText = styled.div`
 const ImgColumn = styled.div`
   background: url(${runners2});
   background-size: cover;
-  width: 100%;
-  display: bock;
+  background-position: center;
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     width: 100%;
