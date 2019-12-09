@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Layout, Container } from 'layouts';
-import { Header, TagsBlock } from 'components';
+import { HeaderGradientMiddleSection, TagsBlock } from 'components';
 
 const Tags = ({ pageContext }) => {
   const { tags } = pageContext;
 
   return (
     <Layout>
-      <Header title="Tags Page">Gatsby Tutorial Starter</Header>
+      <HeaderGradientMiddleSection title="Tags">Gatsby Tutorial Starter</HeaderGradientMiddleSection>
       <Container>
         <TagsBlock list={tags} />
       </Container>

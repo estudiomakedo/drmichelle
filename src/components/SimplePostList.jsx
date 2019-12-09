@@ -63,7 +63,7 @@ font-family: Lato;
 `;
 
 const SeeMore = styled.span`
-  color: #94C128;
+  color: ${props => props.theme.colors.primary.base};
   font-size: 1rem;
   font-weight: 600;
   font-family: Lato;

@@ -101,7 +101,7 @@ const imageStyle = {
 }
 
 const PostHeaderFull = ({ children, title, subtitle, image }) => (
-  <div style={{height: "100vh", backgroundImage: `url(${image.src})`,}}>
+  <div style={{height: "100vh", backgroundImage: `url(${image.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover",}}>
     <div style={{position: "absolute", top: "60%", left: "5%", maxWidth: "997px"}}>
       <FrontMatterTitle>{title}</FrontMatterTitle>
       <FrontMatterSubTitle>{subtitle}</FrontMatterSubTitle>

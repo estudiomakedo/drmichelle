@@ -1,9 +1,9 @@
 ---
 path: "/post-six"
-cover: "../2018-10-16/speed.jpg"
+cover: "./post.jpg"
 date: "2018-10-20"
 title: "Post Number Six"
-tags: ['gatsby', 'tutorial']
+tags: ['gatsby', 'Healthy']
 published: true
 ---
 
