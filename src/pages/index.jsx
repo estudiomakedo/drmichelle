@@ -69,7 +69,7 @@ const Index = ({ data }) => {
         </PostContainer>
       </PostOuterContainer>
 
-      <ClientComments />
+      {/*<ClientComments />*/}
       <ContactSection />
   </Layout>
   );
