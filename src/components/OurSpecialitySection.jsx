@@ -4,6 +4,8 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 //import GoogleFontLoader from 'react-google-font-loader';
 import theme from '../../config/theme';
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
 import SectionTitle from './SectionTitle';
 import BodyText from './BodyText';
@@ -115,6 +117,7 @@ const CardBody = styled.p`
 `;
 
 const CardButton = styled.div`
+  cursor: pointer;
   border-radius: 18px;
   background-color: ${props => props.bgColor};
   font-size: 0.7rem;
@@ -127,68 +130,103 @@ const CardButton = styled.div`
 
 `;
 
-
-const OurSpecialitySection = ({ children, title, date }) => (
-  <Wrapper>
-    {/*<GoogleFontLoader
-          fonts={[
-              {
-                  font: 'Lato',
-                  weights: [300, 400, 600],
-              },
-          ]}
-        />*/}
-    
-    <Row>
-      <CollumnText>
-        <SectionTitle maxSize="1.8rem" text="Seja qual for seu passado, ou histórico familiar, podemos chegar juntos ao seu objetivo." />
-        <CardRow>
-          <Card>
-            <CardBall bgColor={theme.colors.primary.base}>
-              <p>AB</p>
-            </CardBall>
-            <CardTitle>Especialidade</CardTitle>
-            <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-            <CardButton bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
-          </Card>
-          <Card>
-            <CardBall bgColor={theme.colors.secondary.base}>
-              <p>AB</p>
-            </CardBall>
-            <CardTitle>Especialidade</CardTitle>
-            <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-            <CardButton bgColor={theme.colors.secondary.base}>Quero saber</CardButton>
-          </Card>
-          <Card>
-            <CardBall bgColor={theme.colors.primary.base}>
-              <p>AB</p>
-            </CardBall>
-            <CardTitle>Especialidade</CardTitle>
-            <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-            <CardButton bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
-          </Card>
-        </CardRow>
-      </CollumnText>
-      <ImgColumn>
-      </ImgColumn>     
-    </Row>
-    
-
-    
-  </Wrapper>
-);
-
-export default OurSpecialitySection;
-
-OurSpecialitySection.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  date: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  title: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.bool,
-  ]),
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    borderRadius          : '10px',
+    maxWidth              : "50%",
+    boxShadow             : "1px 1px 3px #000029"
+  }
 };
+
+// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement('#___gatsby')
+
+
+export default class OurSpecialitySection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalIsOpen: false,
+      specialityChosen: {title: "Especialidade"}
+    };
+  }
+
+  componentDidMount() {
+  }
+
+  openModal = (num) => {
+    this.setState({modalIsOpen: !this.state.modalIsOpen})
+  }
+
+    render() {
+      return (
+        <Wrapper>
+            <Row>
+              <CollumnText>
+                <SectionTitle maxSize="1.8rem" text="Seja qual for seu passado, ou histórico familiar, podemos chegar juntos ao seu objetivo." />
+                <CardRow>
+                  <Card>
+                    <CardBall bgColor={theme.colors.primary.base}>
+                      <p>AB</p>
+                    </CardBall>
+                    <CardTitle>Especialidade</CardTitle>
+                    <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
+                    <CardButton onClick={() => this.openModal(1)} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
+                  </Card>
+                  <Card>
+                    <CardBall bgColor={theme.colors.secondary.base}>
+                      <p>AB</p>
+                    </CardBall>
+                    <CardTitle>Especialidade</CardTitle>
+                    <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
+                    <CardButton onClick={() => this.openModal(2)} bgColor={theme.colors.secondary.base}>Quero saber</CardButton>
+                  </Card>
+                  <Card>
+                    <CardBall bgColor={theme.colors.primary.base}>
+                      <p>AB</p>
+                    </CardBall>
+                    <CardTitle>Especialidade</CardTitle>
+                    <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
+                    <CardButton onClick={() => this.openModal(3)} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
+                  </Card>
+                </CardRow>
+              </CollumnText>
+              <ImgColumn>
+              </ImgColumn>     
+            </Row>
+            
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onRequestClose={() => this.openModal(3)}
+              style={customStyles}
+              contentLabel="Example Modal"
+            >
+              
+              <CardTitle>{this.state.specialityChosen.title}</CardTitle>
+              <CardBody>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
+              </CardBody>
+              <CardBody>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
+              </CardBody>
+
+              <CardButton onClick={() => this.openModal(3)} bgColor={theme.colors.primary.base}>Fechar</CardButton>
+      
+            </Modal>
+            
+          </Wrapper>
+      );
+    }
+  }
 
 OurSpecialitySection.defaultProps = {
   children: false,
