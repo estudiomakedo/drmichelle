@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   font-family: Lato;
   font-weight: 500;
   font-size: 1.1rem;
@@ -21,18 +21,20 @@ const Nav = styled.nav`
   width: 100%;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-
+  padding: 0.5rem 0;
   top:  ${props => props.noShadow? "0" : "20px"};
   position: relative;
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     justify-content: flex-start;
+    a {
+      margin-left: 2rem;
+    }
   }
 
 
   a {
     color: ${props => props.theme.colors.white.base} !important;
-    margin-left: 2rem;
     transition: all ${props => props.theme.transitions.default.duration};
     text-shadow: ${props => props.noShadow? "none" : "0px 3px 6px #00000029"};
     &:hover {
@@ -79,7 +81,7 @@ export default class NavBar extends React.Component {
 
     render() {
     return (
-      <Headroom style={{color: "white !important", position: "absolute", justifyContent: "center", backgroundColor: this.state.scrollY != 0 ? theme.colors.primary.base : 'transparent'}} calcHeightOnResize disableInlineStyles>
+      <Headroom style={{color: "white !important", position: "absolute", justifyContent: "center", backgroundColor: this.state.scrollY != 0 ? theme.colors.primary.base : 'transparent', padding: 0}} calcHeightOnResize disableInlineStyles>
         <Nav noShadow={this.state.scrollY > 0}>
           <Link to="/">Inicio</Link>
           <Link to="/blog">Blog</Link>
