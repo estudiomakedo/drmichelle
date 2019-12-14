@@ -36,10 +36,18 @@ import { Link } from 'gatsby';
 
 const Wrapper = styled.header`
   height: 100vh;
-  background: url(${cover}) 90% 150% no-repeat;
-  background-size: 450px;
+  background: url(${cover}) 33% 12% no-repeat;
+  background-size: 856px;
   margin: 0 auto;
   max-width: ${props => props.theme.maxWidth};
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.xs}) {
+    height: 100vh;
+    background: url(${cover}) 70% bottom no-repeat;
+    background-size: 500px;
+    margin: 0 auto;
+    max-width: ${props => props.theme.maxWidth};
+  }
 
   @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
     background: url(${cover}) 148% 0% no-repeat;
@@ -87,7 +95,7 @@ const Text = styled.div`
   color: ${props => props.theme.colors.white.base};
   z-index: 0;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -99,8 +107,8 @@ const Text = styled.div`
   margin-bottom: 3rem;
   align-items: center;
 
-  @media screen and (max-width: ${props => props.theme.breakpoints.m}) {
-    top: 50%;
+  @media screen and (min-width: ${props => props.theme.breakpoints.xs}) and (max-width: ${props => props.theme.breakpoints.m}) {
+    top: 69%;
     left: 50%;
     max-width: 800px;
   }
@@ -129,7 +137,7 @@ const Subtitle = styled.p`
 const PositiveMessage = styled.h1`
 text-align: center;
 display: block; 
-font-size: 50px;
+font-size: 35px;
 letter-spacing: 0;
 color: #FFFFFF;
 font-weight: 400;
@@ -202,15 +210,21 @@ const ImgBlue = styled.img`
 `;
 
 const StyledLink = styled(Link)`
-  display: flex;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
 
-
-  @media screen and (max-width:  ${props => props.theme.breakpoints.s}){
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    top: 50px;
+    top: 20px;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.xs}){
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+
   }
 
 
@@ -221,7 +235,13 @@ const StyledLink = styled(Link)`
 `;
 
 const Logo = styled.img`
-  max-width: 330px;
+
+max-width: 240px;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.xs}){
+    max-width: 330px;
+  }
+  
 `;
 
 

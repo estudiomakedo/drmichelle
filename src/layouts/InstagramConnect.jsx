@@ -38,7 +38,7 @@ const Row = styled.div`
   }
 `;
 
-const ClientComments = () => (
+const InstagramConnect = () => (
   <Container>
     <Wrapper>
         <SectionTitle maxSize="1.8rem" text="O que nossos clientes dizem" styles={{padding: "3rem 3rem 1rem"}} />
@@ -65,4 +65,4 @@ const ClientComments = () => (
   </Container>
 
 );
-export default ClientComments;
+export default InstagramConnect;
