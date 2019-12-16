@@ -9,6 +9,7 @@ import {  HeaderGradientSection,
           OurSpecialitySection,
           SectionTitle, RoundButton } from 'components';
 import { Layout, ClientComments, ContactSection } from 'layouts';
+import { Link } from 'gatsby';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -37,13 +38,17 @@ const PostContainer = styled.div`
   }
 `;
 
+
+
 const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <Helmet title={'Home Page'} />
       <HeaderGradientSection />
-      <AppointmentScheduleSection />
+      <div id="knowbetter">
+        <AppointmentScheduleSection />
+      </div>
       <OurSpecialitySection />
       
       <PostOuterContainer>
@@ -65,12 +70,16 @@ const Index = ({ data }) => {
               );
             })}
           </PostWrapper>
-          <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
+          <Link  to="/blog">
+            <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
+          </Link>
         </PostContainer>
       </PostOuterContainer>
 
       {/*<ClientComments />*/}
-      <ContactSection />
+      <div id="faleconosco">
+        <ContactSection />
+      </div>
   </Layout>
   );
 };

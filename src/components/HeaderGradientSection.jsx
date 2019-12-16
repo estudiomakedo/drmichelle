@@ -264,7 +264,9 @@ const HeaderGradientSection = ({ children, title, date }) => (
       <PositiveMessage>Preventiva,</PositiveMessage> 
       <PositiveMessage>Emagrecimento e</PositiveMessage> 
       <PositiveMessage>Longevidade Saudável</PositiveMessage>
-      <RoundButton text="CONHEÇA" />
+      <Link to="/#knowbetter">
+        <RoundButton text="CONHEÇA" />
+      </Link>
     </Text>
 
     <StyledLink to="/">

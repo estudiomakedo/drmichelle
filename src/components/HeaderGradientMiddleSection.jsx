@@ -23,6 +23,7 @@ const Wrapper = styled.header`
   max-width: ${props => props.theme.maxWidth};
 
   &:before {
+    hegiht: 100vh;
     content: '';
     position: absolute;
     top: 0;
@@ -99,13 +100,13 @@ line-height: 1.2;
   width: 90%;
   align-self: flex-start;
   text-shadow: 0px 3px 6px #00000029;
+  margin-left: 2rem;
 }
 
 @media screen and (min-width: ${props => props.theme.breakpoints.m}) and (max-width: ${props => props.theme.breakpoints.l}) {
   font-size: 60px;
   text-align: left;
   width: 100%;
-
 }
 
 @media screen and (min-width: ${props => props.theme.breakpoints.l}) and (max-width: ${props => props.theme.breakpoints.lx}) {

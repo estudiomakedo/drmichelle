@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 //import GoogleFontLoader from 'react-google-font-loader';
 import theme from '../../config/theme';
+import whatsapp from '../../static/whatsapp.png';
 
 import SectionTitle from './SectionTitle';
 import BodyText from './BodyText';
@@ -119,6 +120,15 @@ const SubmitButtonText = styled.p`
   padding: 0.4rem;
   text-align: center;
   margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Icon = styled.img`
+  margin: 0 0 0 5px;
+  max-width: 15px;
 `;
 
 
@@ -126,7 +136,8 @@ export default class HeaderGradientSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: false
+      isVisible: false,
+      name: ""
     };
   }
 
@@ -150,6 +161,21 @@ export default class HeaderGradientSection extends React.Component {
     console.log("toggle");
     this.setState({isVisible: !this.state.isVisible})
   }
+
+  generateWhatsappMessage = (name, email, text) => {
+    let firstPart = "Oi, tudo bem?";
+    let secondPart = "Gostaria muito de agendar uma consulta";
+    let thirdPart = "Quais são os horarios disponíveis?";
+    if(!!name){
+      firstPart = `Oi, eu me chamo ${name}`;
+    }
+    if(!!email){
+      secondPart = `Gostaria muito de agendar uma consulta, meu melhor método de contato é o ${email}`;
+    }
+    if(!!text)
+      thirdPart = text;
+    window.open(`https://wa.me/5571993628734?text=${encodeURIComponent(firstPart)}%0A%0A${encodeURIComponent(secondPart)}%0A%0A${encodeURIComponent(thirdPart)}`)
+  }
   render() {
     const {children, title, date} = this.props;
     return (
@@ -169,17 +195,18 @@ export default class HeaderGradientSection extends React.Component {
               </AHeader>
               {this.state.isVisible &&
               <ABody>
-                <InputBlue placeholder="Seu nome" type="text"/>
+                <InputBlue onChange={event => this.setState({name: event.target.value})} value={this.state.name} placeholder="Seu nome" type="text"/>
 
-                <InputBlue placeholder="Telefone ou e-mail de contato" type="text"/>
+                <InputBlue onChange={event => this.setState({email: event.target.value})} value={this.state.email} placeholder="Telefone ou e-mail de contato" type="text"/>
 
-                <TextAreaBlue defaultValue="Descreva aqui mais detalhes sobre o motivo de sua marcação">
+                <TextAreaBlue onChange={event => this.setState({text: event.target.value})} value={this.state.text} defaultValue="Descreva aqui mais detalhes sobre o motivo de sua marcação">
                   
                 </TextAreaBlue>
 
-                <SubmitButton>
-                  <SubmitButtonText>Enviar</SubmitButtonText>
+                <SubmitButton onClick={() => this.generateWhatsappMessage(this.state.name, this.state.email, this.state.text)}>
+                  <SubmitButtonText>Enviar <Icon src={whatsapp} /></SubmitButtonText>
                 </SubmitButton>
+              
               </ABody>}
             </AppointmentContainer>
           </CollumnAppointment>

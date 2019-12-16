@@ -85,7 +85,7 @@ export default class NavBar extends React.Component {
         <Nav noShadow={this.state.scrollY > 0}>
           <Link to="/">Inicio</Link>
           <Link to="/blog">Blog</Link>
-          <Link to="/blog">Fale Conosco</Link>
+          <Link to="/#faleconosco">Fale Conosco</Link>
         </Nav>
         
       </Headroom>
