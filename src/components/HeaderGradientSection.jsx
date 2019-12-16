@@ -77,6 +77,7 @@ const Wrapper = styled.header`
 
   &:before {
     content: '';
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
