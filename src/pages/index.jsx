@@ -10,6 +10,7 @@ import {  HeaderGradientSection,
           SectionTitle, RoundButton } from 'components';
 import { Layout, ClientComments, ContactSection } from 'layouts';
 import { Link } from 'gatsby';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -44,6 +45,14 @@ const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
+      <GoogleFontLoader
+          fonts={[
+              {
+                font: 'Lato',
+                weights: [400, 500,],
+              },
+          ]}
+      />
       <Helmet title={'Home Page'} />
       <HeaderGradientSection />
       <div id="knowbetter">
