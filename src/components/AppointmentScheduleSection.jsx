@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
-//import GoogleFontLoader from 'react-google-font-loader';
+import GoogleFontLoader from 'react-google-font-loader';
 import theme from '../../config/theme';
 import whatsapp from '../../static/whatsapp.png';
 
@@ -180,6 +180,14 @@ export default class HeaderGradientSection extends React.Component {
     const {children, title, date} = this.props;
     return (
       <Wrapper>
+        <GoogleFontLoader
+          fonts={[
+              {
+                  font: 'Lato',
+                  weights: [300, 400, 600],
+              },
+          ]}
+        />
         <Row>
           <CollumnText>
             <SectionTitle text="Dê boas-vindas a sua melhor versão!" />

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
-//import GoogleFontLoader from 'react-google-font-loader';
+import GoogleFontLoader from 'react-google-font-loader';
 import theme from '../../config/theme';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
@@ -167,6 +167,14 @@ export default class OurSpecialitySection extends React.Component {
     render() {
       return (
         <Wrapper>
+        <GoogleFontLoader
+          fonts={[
+              {
+                  font: 'Lato',
+                  weights: [300, 400, 600],
+              },
+          ]}
+        />
             <Row>
               <CollumnText>
                 <SectionTitle maxSize="1.8rem" text="Seja qual for seu passado, ou histórico familiar, podemos chegar juntos ao seu objetivo." />

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
-//import GoogleFontLoader from 'react-google-font-loader';
+import GoogleFontLoader from 'react-google-font-loader';
 
 import cover from '../../static/photos/cover.jpeg'
 import green from '../../static/green.png'
@@ -247,14 +247,14 @@ max-width: 240px;
 
 const HeaderGradientSection = ({ children, title, date }) => (
   <Wrapper>
-    {/*<GoogleFontLoader
+    <GoogleFontLoader
           fonts={[
               {
                   font: 'Lato',
                   weights: [300, 400, 600],
               },
           ]}
-        />*/}
+        />
     {/*<ImgFixed src={cover} />*/}
     {/*<ImgGreen src={green} />
     <ImgBlue src={blue} />*/}

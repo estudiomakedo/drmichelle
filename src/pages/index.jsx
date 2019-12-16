@@ -45,14 +45,14 @@ const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      {/*<GoogleFontLoader
+      <GoogleFontLoader
           fonts={[
               {
                 font: 'Lato',
                 weights: [400, 500,],
               },
           ]}
-        />*/}
+        />
       <Helmet title={'Home Page'} />
       <HeaderGradientSection />
       <div id="knowbetter">
