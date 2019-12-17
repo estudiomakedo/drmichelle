@@ -23,7 +23,7 @@ const Wrapper = styled.header`
   max-width: ${props => props.theme.maxWidth};
 
   &:before {
-    hegiht: 100vh;
+    height: 100vh;
     content: '';
     position: absolute;
     top: 0;

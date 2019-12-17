@@ -4,12 +4,21 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { HeaderGradientMiddleSection, BlogListSide } from 'components';
 import { Layout, ContactSection } from 'layouts';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <Helmet title={'Blog Page'} />
+      <GoogleFontLoader
+          fonts={[
+              {
+                  font: 'Lato',
+                  weights: [300, 400, 600],
+              },
+          ]}
+        />
       <HeaderGradientMiddleSection title="Blog"></HeaderGradientMiddleSection>
       {edges.map(({ node }) => (
         <BlogListSide

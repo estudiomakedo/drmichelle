@@ -2,12 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Layout, Container } from 'layouts';
 import { HeaderGradientMiddleSection, TagsBlock } from 'components';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const Tags = ({ pageContext }) => {
   const { tags } = pageContext;
 
   return (
     <Layout>
+      <GoogleFontLoader
+          fonts={[
+              {
+                  font: 'Lato',
+                  weights: [300, 400, 600],
+              },
+          ]}
+        />
       <HeaderGradientMiddleSection title="Tags">Gatsby Tutorial Starter</HeaderGradientMiddleSection>
       <Container>
         <TagsBlock list={tags} />
