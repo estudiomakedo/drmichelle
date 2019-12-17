@@ -8,7 +8,7 @@ import {  HeaderGradientSection,
           AppointmentScheduleSection, 
           OurSpecialitySection,
           SectionTitle, RoundButton } from 'components';
-import { Layout, ClientComments, ContactSection } from 'layouts';
+import { Layout, InstagramConnect, ContactSection, PartnersSection } from 'layouts';
 import { Link } from 'gatsby';
 import GoogleFontLoader from 'react-google-font-loader';
 
@@ -43,6 +43,7 @@ const PostContainer = styled.div`
 
 const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
+  console.log(data);
   return (
     <Layout>
       <GoogleFontLoader
@@ -84,6 +85,8 @@ const Index = ({ data }) => {
           </Link>
         </PostContainer>
       </PostOuterContainer>
+      <InstagramConnect posts={data.allInstagramContent.edges} />
+      <PartnersSection/>
 
       {/*<ClientComments />*/}
       <div id="faleconosco">
@@ -113,6 +116,24 @@ Index.propTypes = {
         }).isRequired
       ),
     }),
+    allInstagramContent: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.any,
+            caption: PropTypes.shape({
+              text: PropTypes.string.isRequired
+            }),
+            images: PropTypes.shape({
+              standard_resolution: PropTypes.shape({
+                url: PropTypes.string.isRequired
+              })
+            }),
+            link: PropTypes.string.isRequired
+          }),
+        }).isRequired
+      ),
+    })
   }),
 };
 
@@ -143,6 +164,22 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    allInstagramContent(limit: 4) {
+      edges {
+        node {
+          id
+          caption {
+            text
+          }
+          images {
+            standard_resolution {
+              url
+            }
+          }
+          link
         }
       }
     }

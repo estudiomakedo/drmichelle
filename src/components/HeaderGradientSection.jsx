@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import GoogleFontLoader from 'react-google-font-loader';
 
-import cover from '../../static/photos/cover.jpeg'
+import cover from '../../static/photos/cover.jpg'
 import green from '../../static/green.png'
 import blue from '../../static/blue.png'
 import RoundButton from './RoundButton';
@@ -36,15 +36,15 @@ import { Link } from 'gatsby';
 
 const Wrapper = styled.header`
   height: 100vh;
-  background: url(${cover}) 33% 12% no-repeat;
+  background: url(${cover}) 33% 8% no-repeat;
   background-size: 856px;
   margin: 0 auto;
   max-width: ${props => props.theme.maxWidth};
 
   @media screen and (min-width: ${props => props.theme.breakpoints.xs}) {
     height: 100vh;
-    background: url(${cover}) 70% bottom no-repeat;
-    background-size: 500px;
+    background: url(${cover}) 70% 110% no-repeat;
+    background-size: 450px;
     margin: 0 auto;
     max-width: ${props => props.theme.maxWidth};
   }
@@ -216,7 +216,7 @@ const StyledLink = styled(Link)`
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 20px;
+    top: 40px;
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.xs}){
     display: flex;

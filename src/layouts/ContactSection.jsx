@@ -17,7 +17,7 @@ const Row = styled.div`
 `;
 
 const ContactContainer = styled.div`
-  padding: 4rem 3rem 1rem;
+  padding: 4rem 1rem 1rem;
   width: 100%;
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     padding: 1;
@@ -44,7 +44,8 @@ const ContactItem = styled.div`
 
 const ContactText = styled.p`
   margin: 0 0 0 1rem;
-  color: #7F7F7F;
+  color: #7F7F7F !important;
+  text-decoration: none !important;
   font-size: 18px;
 `;
 

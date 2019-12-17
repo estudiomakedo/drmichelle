@@ -21,8 +21,8 @@ const Nav = styled.nav`
   width: 100%;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 0.5rem 0;
-  top:  ${props => props.noShadow? "0" : "20px"};
+  padding: 20px 0;
+  top:  0;
   position: relative;
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
@@ -34,9 +34,9 @@ const Nav = styled.nav`
 
 
   a {
-    color: ${props => props.theme.colors.white.base} !important;
+    color: #fafafa !important;
     transition: all ${props => props.theme.transitions.default.duration};
-    text-shadow: ${props => props.noShadow? "none" : "0px 3px 6px #00000029"};
+    text-shadow: ${props => props.noShadow? "none" : "0px 3px 6px #0000004c"};
     &:hover {
       color: ${props => props.theme.colors.primary.base};
     }

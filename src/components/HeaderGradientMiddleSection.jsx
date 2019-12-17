@@ -23,7 +23,7 @@ const Wrapper = styled.header`
   max-width: ${props => props.theme.maxWidth};
 
   &:before {
-    height: 100vh;
+    height: 50vh;
     content: '';
     position: absolute;
     top: 0;
@@ -150,7 +150,6 @@ const Logo = styled.img`
 
 const HeaderGradientMiddleSection = ({ children, title, date }) => (
   <Wrapper>
-
     <StyledLink to="/">
       <Logo src={logo} alt="Gatsby Logo" />
     </StyledLink>

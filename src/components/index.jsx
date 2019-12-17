@@ -13,6 +13,7 @@ import OurSpecialitySection from './OurSpecialitySection';
 import SectionTitle from './SectionTitle';
 import BodyText from './BodyText';
 import CommentCard from './CommentCard';
+import InstagramCard from './InstagramCard';
 import PostHeaderFull from './PostHeaderFull';
 
 export { 
@@ -31,5 +32,6 @@ export {
     BodyText,
     SimplePostList,
     CommentCard,
-    PostHeaderFull
+    PostHeaderFull,
+    InstagramCard
 };

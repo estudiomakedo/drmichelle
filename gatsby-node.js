@@ -25,6 +25,22 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+            allInstagramContent(limit: 4) {
+              edges {
+                node {
+                  id
+                  caption {
+                    text
+                  }
+                  images {
+                    standard_resolution {
+                      url
+                    }
+                  }
+                  link
+                }
+              }
+            }
           }
         `
       ).then(result => {

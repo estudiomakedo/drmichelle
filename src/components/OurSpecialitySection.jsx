@@ -139,10 +139,11 @@ const customStyles = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
     borderRadius          : '10px',
-    maxWidth              : "50%",
+    maxWidth              : "500px",
     boxShadow             : "1px 1px 3px #000029"
   }
 };
+
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#___gatsby')

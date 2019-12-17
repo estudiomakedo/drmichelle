@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 import { Layout, Container } from 'layouts';
 import { HeaderGradientMiddleSection } from 'components';
 import config from '../../config/site';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const StyledLink = styled(Link)`
   color: ${props => props.theme.colors.white.base};
@@ -44,6 +45,14 @@ const Tag = ({ pageContext }) => {
   const upperTag = tagName.charAt(0).toUpperCase() + tagName.slice(1);
   return (
     <Layout>
+        <GoogleFontLoader
+          fonts={[
+              {
+                  font: 'Lato',
+                  weights: [300, 400, 600],
+              },
+          ]}
+        />
       <Helmet title={`${tagName} | ${config.siteTitle}`} />
       <HeaderGradientMiddleSection title={upperTag}>
         <LinkContainer>

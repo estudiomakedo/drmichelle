@@ -5,3 +5,5 @@ export { default as Layout } from './Layout';
 export { default as NavBar } from './NavBar';
 export { default as ClientComments } from './ClientComments';
 export { default as ContactSection } from './ContactSection';
+export { default as PartnersSection } from './PartnersSection';
+export { default as InstagramConnect } from './InstagramConnect';

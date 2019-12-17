@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {SectionTitle, CommentCard} from '../components';
+import {SectionTitle, InstagramCard, RoundButton} from '../components';
+import instagram from '../../static/instagramColor.png'
 
 const Container = styled.div`
-background-color: #FCFCFC;
+  background-image: linear-gradient(180deg, #FCFCFC 0%, #FCFCFC 49%, #d59cb9 100%);
 `;
 
 const Wrapper = styled.section`
@@ -20,7 +21,7 @@ const Row = styled.div`
   justify-content: space-around;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0;
   flex-wrap: wrap;
 
   & section {
@@ -38,31 +39,61 @@ const Row = styled.div`
   }
 `;
 
-const InstagramConnect = () => (
+const ContainerBtn = styled.a`
+  background-color: ${props => props.theme.colors.white.base};
+  border-radius: 25px;
+  padding: 10px 45px;
+  margin-top: 2rem;
+  box-shadow:  0px 3px 6px #00000029;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Text = styled.p`
+  color: #696969;
+  text-align: center;
+  font-size: 20px;
+  margin:0;
+
+  & img{
+    display: inline;
+  }
+`;
+
+const InstagramConnect = ({posts}) => (
   <Container>
     <Wrapper>
-        <SectionTitle maxSize="1.8rem" text="O que nossos clientes dizem" styles={{padding: "3rem 3rem 1rem"}} />
+        <SectionTitle maxSize="1.8rem" text="Top Posts da Semana" styles={{padding: "3rem 3rem 1rem"}} />
 
         <Row>
-          <CommentCard
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            name="Rosana Weber"
-          />
-          <CommentCard
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            name="Rosana Weber"
-          />
-          <CommentCard
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            name="Rosana Weber"
-          />
-          <CommentCard
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            name="Rosana Weber"
-          />
+          {posts.map(e => (
+            <InstagramCard
+              key={e.node.id}
+              text={e.node.caption.text}
+              imgUrl={e.node.images.standard_resolution.url}
+              link={e.node.link}
+            />
+          ))}
         </Row>
+
+        <ContainerBtn href={"https://www.instagram.com/itsfranklins"} target="__blank">
+          <Icon src={instagram} />
+          <Text>@MichelleSartori</Text>
+        </ContainerBtn>
       </Wrapper>
   </Container>
 
 );
 export default InstagramConnect;
+
+InstagramConnect.defaultProps = {
+  posts: [],
+};
+
+const Icon = styled.img`
+  margin: 0 10px 0 0;
+  max-width: 25px;
+`;

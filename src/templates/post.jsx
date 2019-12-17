@@ -6,6 +6,7 @@ import { Layout, Container, Content } from 'layouts';
 import { TagsBlock, PostHeaderFull, SEO } from 'components';
 import '../styles/prism';
 import Theme from '../../config/theme';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const SuggestionBar = styled.div`
   display: flex;
@@ -38,6 +39,14 @@ const Post = ({ data, pageContext }) => {
 
   return (
     <Layout>
+       <GoogleFontLoader
+          fonts={[
+              {
+                  font: 'Lato',
+                  weights: [300, 400, 600],
+              },
+          ]}
+        />
       <SEO
         title={title}
         description={description || excerpt || ' '}
