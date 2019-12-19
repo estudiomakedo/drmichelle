@@ -75,7 +75,8 @@ const Card = styled.div`
   }
 
   & img {
-    margin: 0
+    margin: 0;
+    max-height: 100%;
   }
   
 `;
