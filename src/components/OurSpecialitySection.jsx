@@ -56,10 +56,16 @@ const CardRow = styled.div`
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 
-  justify-content: space-between;
+  justify-content: center;
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     flex-direction: row;
+  }
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 `;
 
@@ -68,7 +74,7 @@ const Card = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 20px;
   padding: 15px;
-  margin: 60px 15px 20px;
+  margin: 80px 15px 20px;
   max-width: 300px;
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     margin-bottom: 0;

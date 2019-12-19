@@ -8,7 +8,14 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
 import {SectionTitle} from '../components';
+
 import amil from '../../static/convenios/amil.png';
+import bradesco from '../../static/convenios/bradesco.png';
+import careplus from '../../static/convenios/careplus.png';
+import onehealth from '../../static/convenios/onehealth.png';
+import portoseguro from '../../static/convenios/portoseguro.jpg';
+import sompo from '../../static/convenios/sompo.png';
+import sulamerica from '../../static/convenios/sulamerica.png';
 const Wrapper = styled.header`
   padding: 2rem 1rem;
   background-color: #FCFCFC;
@@ -39,16 +46,16 @@ const CollumnText = styled.div`
 const CardRow = styled.div`
   display: flex;
   margin: 0 auto;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     flex-direction: row;
   }
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
-    justify-content: flex-start;
+    justify-content: space-evenly;
   }
 `;
 
@@ -59,7 +66,8 @@ const Card = styled.div`
   padding: 15px;
   margin: 15px 15px 20px;
   display: flex;
-  max-width: 200px;
+  width: 150px;
+  flex-wrap: wrap;
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     margin-bottom: 0;
     max-width: 300px;
@@ -113,10 +121,22 @@ export default class PartnersSection extends React.Component {
                     <img src={amil} />
                   </Card>
                   <Card>
-                    <img src={amil} />
+                    <img src={bradesco} />
                   </Card>
                   <Card>
-                    <img src={amil} />
+                    <img src={careplus} />
+                  </Card>
+                  <Card>
+                    <img src={onehealth} />
+                  </Card>
+                  <Card>
+                    <img src={portoseguro} />
+                  </Card>
+                  <Card>
+                    <img src={sompo} />
+                  </Card>
+                  <Card>
+                    <img src={sulamerica} />
                   </Card>
                 </CardRow>
               </CollumnText>

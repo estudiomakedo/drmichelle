@@ -59,6 +59,7 @@ const Text = styled.p`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+
 `;
 
 const SubmitButton = styled.a`

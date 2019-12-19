@@ -25,6 +25,7 @@ const Row = styled.div`
   flex-wrap: wrap;
 
   & section {
+    width: 90%;
     margin-bottom: 4rem;
 
     @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
@@ -79,9 +80,9 @@ const InstagramConnect = ({posts}) => (
           ))}
         </Row>
 
-        <ContainerBtn href={"https://www.instagram.com/itsfranklins"} target="__blank">
+        <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={instagram} />
-          <Text>@MichelleSartori</Text>
+          <Text>@draMicheleSartori</Text>
         </ContainerBtn>
       </Wrapper>
   </Container>
