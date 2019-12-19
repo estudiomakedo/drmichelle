@@ -228,6 +228,16 @@ const StyledLink = styled(Link)`
 
   }
 
+  @media screen and (min-width:  ${props => props.theme.breakpoints.xs}){
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+
+  }
+
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     justify-content: flex-end;
@@ -245,6 +255,12 @@ max-width: 240px;
   
 `;
 
+const DisplayNone = styled.div`
+
+@media screen and (max-width:  ${props => props.theme.breakpoints.s}){
+  display: none;
+}
+`;
 
 const HeaderGradientSection = ({ children, title, date }) => (
   <Wrapper>
@@ -265,13 +281,15 @@ const HeaderGradientSection = ({ children, title, date }) => (
       <PositiveMessage>Preventiva,</PositiveMessage> 
       <PositiveMessage>Emagrecimento e</PositiveMessage> 
       <PositiveMessage>Longevidade Saudável</PositiveMessage>
-      <Link to="/#knowbetter">
-        <RoundButton text="CONHEÇA" />
-      </Link>
+      <DisplayNone>
+        <Link to="/#knowbetter">
+          <RoundButton text="CONHEÇA" />
+        </Link>
+      </DisplayNone>
     </Text>
 
     <StyledLink to="/">
-      <Logo src={logo} alt="Gatsby Logo" />
+      <Logo src={logo} alt="Dr Michelle Sartori Logo" />
     </StyledLink>
       {children && <Subtitle>{children}</Subtitle>}
     
