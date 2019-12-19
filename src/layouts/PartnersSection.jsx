@@ -47,11 +47,13 @@ const CardRow = styled.div`
   display: flex;
   margin: 0 auto;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
   }
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
