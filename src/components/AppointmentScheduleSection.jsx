@@ -192,8 +192,15 @@ export default class HeaderGradientSection extends React.Component {
           <CollumnText>
             <SectionTitle text="Dê boas-vindas a sua melhor versão!" />
             <BodyText 
-              paragraph1="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-              paragraph2="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              paragraph1="
+              Nunca é tarde para (re)começar, seja você o agente para sua transformação e conte com o meu apoio especializado para atingir seu objetivo. Sou 
+              Graduada em Medicina há 9 anos e Pós-Graduada em Medicina Preventiva, Ciências da Longevidade Humana e em Dermatologia Clínica e Estética. 
+              Sempre gostei de cuidar das pessoas e, por isso, decidi estudar Medicina.
+              "
+              paragraph2="
+              Hoje tenho a certeza de que fiz a escolha certa! Amo minha profissão e é extremamente gratificante receber o retorno 
+              dos meus pacientes satisfeitos com meu trabalho e dedicação, ao alcançar os resultados desejados por eles. 
+              Juntos alinharemos um plano personalizado, capaz de lhe atender perfeitamente durante seu dia-a-dia, nosso foco é numa melhora da sua qualidade de vida."
             />
           </CollumnText>
           <CollumnAppointment>

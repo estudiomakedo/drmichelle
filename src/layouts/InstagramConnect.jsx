@@ -82,7 +82,7 @@ const InstagramConnect = ({posts}) => (
 
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={instagram} />
-          <Text>@draMicheleSartori</Text>
+          <Text>@dramichelesartori</Text>
         </ContainerBtn>
       </Wrapper>
   </Container>

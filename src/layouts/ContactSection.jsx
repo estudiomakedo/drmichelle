@@ -93,15 +93,16 @@ const ContactSection = () => (
         <ContactItem>
           <Icon src={phone} />
           <ContactText>
-            (11) 9999-9999
+            (11) 98146-6365
           </ContactText>
         </ContactItem>
         <MapsContainer>
           <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
             frameborder="0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=adolfomonteiro+campoformoso+BA" allowfullscreen>
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=duarte+de+azevedo+448+santana+SP" allowfullscreen>
           </iframe>
-          <Address>Rua x, numero 20 - SP</Address>
+          <Address>CLÍNICA SAÚDE INTEGRAL​​</Address>
+          <Address>Rua Duarte de Azevedo, 448, Conj 121 - Santana, SP</Address>
         </MapsContainer>
       </ContactContainer>
       <ImageContainer>

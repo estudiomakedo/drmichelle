@@ -66,6 +66,7 @@ const CardRow = styled.div`
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: flex-start;
   }
 `;
 
@@ -130,7 +131,7 @@ const CardButton = styled.div`
   text-align: center;
   color: #fff;
   padding: 0.3rem;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   font-weight: 300;
   max-width: 150px;
 
@@ -160,15 +161,19 @@ export default class OurSpecialitySection extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: false,
-      specialityChosen: {title: "Especialidade"}
+      specialityChosenTitle: "",
+      chosenText: 1
     };
   }
 
   componentDidMount() {
   }
 
-  openModal = (num) => {
-    this.setState({modalIsOpen: !this.state.modalIsOpen})
+  openModal = (num, title) => {
+    this.setState({ modalIsOpen: !this.state.modalIsOpen,
+                    specialityChosenTitle: title,
+                    chosenText: num
+                  })
   }
 
     render() {
@@ -188,27 +193,27 @@ export default class OurSpecialitySection extends React.Component {
                 <CardRow>
                   <Card>
                     <CardBall bgColor={theme.colors.primary.base}>
-                      <p>AB</p>
+                      <p>ES</p>
                     </CardBall>
-                    <CardTitle>Especialidade</CardTitle>
-                    <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-                    <CardButton onClick={() => this.openModal(1)} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
+                    <CardTitle>Emagrecimento Saudável</CardTitle>
+                    <CardBody>Trata-se na elaboração de um plano personalizado para você, sem dietas malucas ou projeções ilusórias.</CardBody>
+                    <CardButton onClick={() => this.openModal(1, "Medicina Preventiva")} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
                   </Card>
                   <Card>
                     <CardBall bgColor={theme.colors.secondary.base}>
-                      <p>AB</p>
+                      <p>LH</p>
                     </CardBall>
-                    <CardTitle>Especialidade</CardTitle>
-                    <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-                    <CardButton onClick={() => this.openModal(2)} bgColor={theme.colors.secondary.base}>Quero saber</CardButton>
+                    <CardTitle>Longevidade Humana</CardTitle>
+                    <CardBody>Foco em aumentar a longevidade do paciente através da Medicina Preventiva, proporcionando um bem-estar prolongado na melhor idade.</CardBody>
+                    <CardButton onClick={() => this.openModal(2, "Longevidade Humana")} bgColor={theme.colors.secondary.base}>Quero saber</CardButton>
                   </Card>
                   <Card>
                     <CardBall bgColor={theme.colors.primary.base}>
-                      <p>AB</p>
+                      <p>DC</p>
                     </CardBall>
-                    <CardTitle>Especialidade</CardTitle>
-                    <CardBody>Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.</CardBody>
-                    <CardButton onClick={() => this.openModal(3)} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
+                    <CardTitle>Dermatologia Clínica</CardTitle>
+                    <CardBody>Trata-se no diagnóstico, prevenção e tratamento de doenças e afecções relacionadas à pele, pelos, mucosas, cabelo e unhas.</CardBody>
+                    <CardButton onClick={() => this.openModal(3, "Dermatologia Clínica")} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
                   </Card>
                 </CardRow>
               </CollumnText>
@@ -218,23 +223,47 @@ export default class OurSpecialitySection extends React.Component {
             
             <Modal
               isOpen={this.state.modalIsOpen}
-              onRequestClose={() => this.openModal(3)}
+              onRequestClose={() => this.setState({ modalIsOpen: false })}
               style={customStyles}
               contentLabel="Example Modal"
             >
               
-              <CardTitle>{this.state.specialityChosen.title}</CardTitle>
-              <CardBody>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
-              </CardBody>
-              <CardBody>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco.Duis aute irure dolor.
-              </CardBody>
+              <CardTitle>{this.state.specialityChosenTitle}</CardTitle>
 
-              <CardButton onClick={() => this.openModal(3)} bgColor={theme.colors.primary.base}>Fechar</CardButton>
+              {this.state.chosenText == 1 && 
+              <div>
+                <CardBody>
+                  A calma é parceira do emagrecimento saudável. Quando se acelera o processo, o corpo se torna fraco e desmotivado. Se você pegar pesado nos exercícios, pode até sofrer uma lesão. 
+                  Não é possível manter uma dieta assim por muito tempo. Por isso é extremamente importante fazer mudanças graduais.
+                </CardBody>
+              </div>}
+
+              {this.state.chosenText == 2 && 
+              <div>
+                <CardBody>
+                  O conceito de longevidade humana vai muito além de uma vida com poucas doenças, 
+                  sem muitos remédios no armário de casa e vivendo plenamente na companhia de netos e bisnetos.
+                </CardBody>
+                <CardBody>
+                  Os avanços científicos que houveram na medicina, proporcionaram um ganho na quantidade de anos vividos, porém nem sempre na qualidade destes anos. 
+                  As doenças crônicas são muito comuns, até mesmo antes de atingir os 60 anos. No entanto, a expectativa é que usem medicamentos para controle por toda a vida.
+                </CardBody>
+                <CardBody>
+                  Eis a importância do tratamento com foco na Longevidade Humana, 
+                  pois é a melhor forma de afastar as doenças crônicas que lhe torna refém dos medicamentos controlados. 
+                </CardBody>
+              </div>}
+             
+              {this.state.chosenText == 3 && 
+              <div>
+                <CardBody>
+                  A Dematologia Clínica é responsável em cuidar da pele e dos tecidos moles, cuidado do diagnóstico, prevenção e acompanhamento de doenças, 
+                  como o câncer da pele, o vitiligo ou a psoríase, e de condições como envelhecimento cutâneo, estrias e celulite.
+                </CardBody>
+              </div>}
+             
+
+              <CardButton onClick={() => this.setState({ modalIsOpen: false })} bgColor={theme.colors.primary.base}>Fechar</CardButton>
       
             </Modal>
             

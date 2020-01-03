@@ -120,13 +120,14 @@ const Text = styled.div`
     left: 39%;
     max-width: 800px;
     margin-left: 2rem;
+    align-items: flex-start;
   }
 
   @media screen and (min-width: ${props => props.theme.breakpoints.l}) {
     top: 50%;
     left: 40%;
     max-width: 1000px;
-  
+    align-items: flex-start;
   }
 `;
 
