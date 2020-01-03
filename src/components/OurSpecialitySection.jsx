@@ -189,7 +189,7 @@ export default class OurSpecialitySection extends React.Component {
         />
             <Row>
               <CollumnText>
-                <SectionTitle maxSize="1.8rem" text="Seja qual for seu passado, ou histórico familiar, podemos chegar juntos ao seu objetivo." />
+                <SectionTitle maxSize="2em" text="Seja qual for seu passado, ou histórico familiar, podemos chegar juntos ao seu objetivo." />
                 <CardRow>
                   <Card>
                     <CardBall bgColor={theme.colors.primary.base}>

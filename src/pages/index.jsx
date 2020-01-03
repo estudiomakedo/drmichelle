@@ -63,7 +63,7 @@ const Index = ({ data }) => {
       
       {/*<PostOuterContainer>
         <PostContainer>
-          <SectionTitle maxSize="1.8rem" text="Acompanhe os nossos últimos posts" />
+          <SectionTitle maxSize="2rem" text="Acompanhe os nossos últimos posts" />
           <PostWrapper>
             {edges.map(({ node }) => {
               const { id, excerpt, frontmatter } = node;

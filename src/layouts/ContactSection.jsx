@@ -83,7 +83,7 @@ const ContactSection = () => (
   <Wrapper>
     <Row>
       <ContactContainer>
-        <SectionTitle maxSize="1.8rem" text="Dúvidas? Fale comigo"  />
+        <SectionTitle maxSize="2rem" text="Dúvidas? Fale comigo"  />
         <ContactItem>
           <Icon src={email} />
           <ContactText>

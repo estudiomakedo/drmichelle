@@ -41,7 +41,7 @@ const Row = styled.div`
 const ClientComments = () => (
   <Container>
     <Wrapper>
-        <SectionTitle maxSize="1.8rem" text="O que nossos clientes dizem" styles={{padding: "3rem 3rem 1rem"}} />
+        <SectionTitle maxSize="2rem" text="O que nossos clientes dizem" styles={{padding: "3rem 3rem 1rem"}} />
 
         <Row>
           <CommentCard

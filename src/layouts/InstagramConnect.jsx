@@ -67,7 +67,7 @@ const Text = styled.p`
 const InstagramConnect = ({posts}) => (
   <Container>
     <Wrapper>
-        <SectionTitle maxSize="1.8rem" text="Top Posts da Semana" styles={{padding: "3rem 3rem 1rem"}} />
+        <SectionTitle maxSize="2rem" text="Top Posts da Semana" styles={{padding: "3rem 3rem 1rem"}} />
 
         <Row>
           {posts.map(e => (

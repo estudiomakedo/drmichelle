@@ -114,7 +114,7 @@ export default class PartnersSection extends React.Component {
         />
             <Row>
               <CollumnText>
-                <SectionTitle maxSize="1.8rem" text="Convênios Aceitos (via reembolso)" />
+                <SectionTitle maxSize="2rem" text="Convênios Aceitos (via reembolso)" />
                 <CardRow>
                   <Card>
                     <img src={amil} />
