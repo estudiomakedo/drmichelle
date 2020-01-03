@@ -61,7 +61,7 @@ const Index = ({ data }) => {
       </div>
       <OurSpecialitySection />
       
-      <PostOuterContainer>
+      {/*<PostOuterContainer>
         <PostContainer>
           <SectionTitle maxSize="1.8rem" text="Acompanhe os nossos últimos posts" />
           <PostWrapper>
@@ -84,7 +84,7 @@ const Index = ({ data }) => {
             <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
           </Link>
         </PostContainer>
-      </PostOuterContainer>
+          </PostOuterContainer>*/}
       <InstagramConnect posts={data.allInstagramContent.edges} />
       <PartnersSection/>
 

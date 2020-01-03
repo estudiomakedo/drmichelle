@@ -84,7 +84,7 @@ export default class NavBar extends React.Component {
       <Headroom style={{color: "white !important", position: "absolute", justifyContent: "center", backgroundColor: this.state.scrollY != 0 ? theme.colors.primary.base : 'transparent', padding: 0}} calcHeightOnResize disableInlineStyles>
         <Nav noShadow={this.state.scrollY > 0}>
           <Link to="/">Inicio</Link>
-          <Link to="/blog">Blog</Link>
+          {/*<Link to="/blog">Blog</Link>*/}
           <Link to="/#faleconosco">Fale Conosco</Link>
         </Nav>
         
