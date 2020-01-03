@@ -65,9 +65,7 @@ const Card = styled.div`
   border-radius: 20px;
   padding: 15px;
   margin: 15px 15px 20px;
-  display: flex;
   width: 150px;
-  flex-wrap: wrap;
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     margin-bottom: 0;
     max-width: 300px;
@@ -75,7 +73,8 @@ const Card = styled.div`
   }
 
   & img {
-    margin: 0
+    margin: 0;
+    max-height: 100%;
   }
   
 `;
