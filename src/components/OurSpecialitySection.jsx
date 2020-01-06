@@ -147,7 +147,8 @@ const customStyles = {
     transform             : 'translate(-50%, -50%)',
     borderRadius          : '10px',
     maxWidth              : "500px",
-    boxShadow             : "1px 1px 3px #000029"
+    boxShadow             : "1px 1px 3px #000029",
+    maxHeight             : "70vh"
   }
 };
 

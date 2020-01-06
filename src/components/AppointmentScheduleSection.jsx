@@ -174,7 +174,7 @@ export default class HeaderGradientSection extends React.Component {
     }
     if(!!text)
       thirdPart = text;
-    window.open(`https://wa.me/5571993628734?text=${encodeURIComponent(firstPart)}%0A%0A${encodeURIComponent(secondPart)}%0A%0A${encodeURIComponent(thirdPart)}`)
+    window.open(`https://wa.me/5511981466365?text=${encodeURIComponent(firstPart)}%0A%0A${encodeURIComponent(secondPart)}%0A%0A${encodeURIComponent(thirdPart)}`)
   }
   render() {
     const {children, title, date} = this.props;
