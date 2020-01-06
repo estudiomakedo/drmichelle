@@ -65,7 +65,7 @@ const CardRow = styled.div`
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
   }
 `;
@@ -207,14 +207,14 @@ export default class OurSpecialitySection extends React.Component {
                     <CardBody>Foco em aumentar a longevidade do paciente através da Medicina Preventiva, proporcionando um bem-estar prolongado na melhor idade.</CardBody>
                     <CardButton onClick={() => this.openModal(2, "Longevidade Humana")} bgColor={theme.colors.secondary.base}>Quero saber</CardButton>
                   </Card>
-                  <Card>
+                  {/*<Card>
                     <CardBall bgColor={theme.colors.primary.base}>
                       <p>DC</p>
                     </CardBall>
                     <CardTitle>Dermatologia Clínica</CardTitle>
                     <CardBody>Trata-se no diagnóstico, prevenção e tratamento de doenças e afecções relacionadas à pele, pelos, mucosas, cabelo e unhas.</CardBody>
                     <CardButton onClick={() => this.openModal(3, "Dermatologia Clínica")} bgColor={theme.colors.primary.base}>Quero saber mais</CardButton>
-                  </Card>
+                  </Card>*/}
                 </CardRow>
               </CollumnText>
               <ImgColumn>

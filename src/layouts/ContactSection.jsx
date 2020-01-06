@@ -54,12 +54,27 @@ const Icon = styled.img`
   max-width: 35px;
 `;
 
+const MapsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    flex-direction: row;
+  }
+`;
+
 const MapsContainer = styled.div`
+  flex: 1;
   margin-top : 1rem;
   background-color: #0282A0;
   border: 4px solid #0282A0;
   border-radius: 3px 3px 10px 10px;
   max-width: 600px;
+  margin: 0.5rem 0.5rem;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    margin: 0 0.5rem;
+  }
 `;
 
 const Address = styled.p`
@@ -96,14 +111,25 @@ const ContactSection = () => (
             (11) 98146-6365
           </ContactText>
         </ContactItem>
-        <MapsContainer>
-          <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
-            frameborder="0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=duarte+de+azevedo+448+santana+SP" allowfullscreen>
-          </iframe>
-          <Address>CLÍNICA SAÚDE INTEGRAL​​</Address>
-          <Address>Rua Duarte de Azevedo, 448, Conj 121 - Santana, SP</Address>
-        </MapsContainer>
+        <MapsWrapper>
+          <MapsContainer>
+            <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
+              frameborder="0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=duarte+de+azevedo+448+santana+SP" allowfullscreen>
+            </iframe>
+            <Address>CLÍNICA SAÚDE INTEGRAL​​</Address>
+            <Address>Rua Duarte de Azevedo, 448, Conj 121 - Santana, SP</Address>
+          </MapsContainer>
+          <MapsContainer>
+            <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
+              frameborder="0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=presidente+juscelino+kubitschek+1545+vila+nova+conceicao+SP" allowfullscreen>
+            </iframe>
+            <Address>CLÍNICA SAGAPO​​</Address>
+            <Address>Av. Pres. Juscelino Kubitschek, 1545 - Vila Nova Conceição, SP</Address>
+          </MapsContainer>
+        </MapsWrapper>
+        
       </ContactContainer>
       <ImageContainer>
         {/*<FooterImg src={footerImg} />*/}
