@@ -87,7 +87,7 @@ const ContactSection = () => (
         <ContactItem>
           <Icon src={email} />
           <ContactText>
-            atendimento@michelesartori.com
+            atendimento@dramichelesartori.com
           </ContactText>
         </ContactItem>
         <ContactItem>
