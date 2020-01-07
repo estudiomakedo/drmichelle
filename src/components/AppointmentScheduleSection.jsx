@@ -214,7 +214,7 @@ export default class HeaderGradientSection extends React.Component {
 
                 <InputBlue onChange={event => this.setState({email: event.target.value})} value={this.state.email} placeholder="Telefone ou e-mail de contato" type="text"/>
 
-                <TextAreaBlue onChange={event => this.setState({text: event.target.value})} value={this.state.text} defaultValue="Descreva aqui mais detalhes sobre o motivo de sua marcação">
+                <TextAreaBlue onChange={event => this.setState({text: event.target.value})} value={this.state.text} placeholder="Descreva aqui mais detalhes sobre o motivo de sua marcação">
                   
                 </TextAreaBlue>
 
