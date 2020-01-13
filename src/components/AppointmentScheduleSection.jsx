@@ -166,11 +166,12 @@ export default class HeaderGradientSection extends React.Component {
     let firstPart = "Oi, tudo bem?";
     let secondPart = "Gostaria muito de agendar uma consulta";
     let thirdPart = "Quais são os horarios disponíveis?";
+
     if(!!name){
-      firstPart = `Oi, eu me chamo ${name}`;
+      firstPart = `Oi, eu me chamo ${name}.`;
     }
     if(!!email){
-      secondPart = `Gostaria muito de agendar uma consulta, meu melhor método de contato é o ${email}`;
+      secondPart = ` Gostaria muito de agendar uma consulta. Meu melhor método de contato é o ${email}. `;
     }
     if(!!text)
       thirdPart = text;
