@@ -8,7 +8,7 @@ import {  HeaderGradientSection,
           AppointmentScheduleSection, 
           OurSpecialitySection,
           SectionTitle, RoundButton } from 'components';
-import { Layout, InstagramConnect, ContactSection, PartnersSection } from 'layouts';
+import { Layout, InstagramConnect, ContactSection, PartnersSection, AConsulta } from 'layouts';
 import { Link } from 'gatsby';
 import GoogleFontLoader from 'react-google-font-loader';
 
@@ -61,6 +61,8 @@ const Index = ({ data }) => {
       </div>
       <OurSpecialitySection />
       
+      <AConsulta/>
+
       {/*<PostOuterContainer>
         <PostContainer>
           <SectionTitle maxSize="2rem" text="Acompanhe os nossos últimos posts" />

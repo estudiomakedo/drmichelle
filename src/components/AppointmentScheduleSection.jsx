@@ -191,17 +191,19 @@ export default class HeaderGradientSection extends React.Component {
         />
         <Row>
           <CollumnText>
-            <SectionTitle text="Dê boas-vindas a sua melhor versão!" />
+            <SectionTitle text="Quem é a Dra. Michele?" />
             <BodyText 
               paragraph1="
-              Nunca é tarde para (re)começar, seja você o agente para sua transformação e conte com o meu apoio especializado para atingir seu objetivo. Sou 
-              Graduada em Medicina há 9 anos e Pós-Graduada em Medicina Preventiva, Ciências da Longevidade Humana e em Dermatologia Clínica e Estética. 
-              Sempre gostei de cuidar das pessoas e, por isso, decidi estudar Medicina.
+              A Dra. Michele Sartori é natural de xxxxxxx, graduada em medicina há 9 anos, 
+              pela Universidade xxxxxxxxxx, com pós-graduação em Dermatologia Estética (INSTITUIÇÃO), 
+              Medicina Preventiva (INSTITUIÇÃO) e Ciências da Longevidade Humana (INSTITUIÇÃO). 
+              A escolha da profissão se deu pelo apreço que tinha, desde cedo, pelo cuidado e atenção à pessoa humana, o que a fez se enveredar pelos estudos da vida e 
+              longevidade saudável, sendo o seu enfoque profissional a área da Medicina Integrativa com vistas a promover a Longevidade Saudável de seus pacientes.
               "
               paragraph2="
-              Hoje tenho a certeza de que fiz a escolha certa! Amo minha profissão e é extremamente gratificante receber o retorno 
-              dos meus pacientes satisfeitos com meu trabalho e dedicação, ao alcançar os resultados desejados por eles. 
-              Juntos alinharemos um plano personalizado, capaz de lhe atender perfeitamente durante seu dia-a-dia, nosso foco é numa melhora da sua qualidade de vida."
+              Sua trajetória acadêmica engloba especializações e aperfeiçoamentos voltados à prática da Medicina Integrativa, focalizando emagrecimento saudável, 
+              longevidade, manutenção da qualidade de vida, tratamentos hormonais e metabólicos e prevenção de doenças, 
+              com referências na área, como o Dr. Victor Sorrentino, Dr. Fernando Filho, Dr. Willy Mathias, Dr. Jair Ribeiro, entre outros."
             />
           </CollumnText>
           <CollumnAppointment>
