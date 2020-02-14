@@ -20,6 +20,12 @@ const Blog = ({ data }) => {
           ]}
         />
       <HeaderGradientMiddleSection title="Blog"></HeaderGradientMiddleSection>
+      <BodyText 
+       paragraph1="Bem-vindo ao blog da Dra. Michele Sartori! Aqui, serão publicados, mensalmente, artigos sobre os principais assuntos médicos da atualidade, 
+       assinados pela própria doutora ou médicos convidados. 
+       Haverá também a repercussão das principais notícias e novidades médicas do mundo, com o comentário da doutora."
+      />
+
       {edges.map(({ node }) => (
         <BlogListSide
           key={node.id}

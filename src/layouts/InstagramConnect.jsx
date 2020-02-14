@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {SectionTitle, InstagramCard, RoundButton} from '../components';
+import {SectionTitle, InstagramCard, BodyText} from '../components';
 import instagram from '../../static/instagramColor.png'
+import linkedin from '../../static/linkedin.png'
+import facebook from '../../static/facebook.png'
+import doctoralia from '../../static/doctoralia.png'
 
 const Container = styled.div`
   background-image: linear-gradient(180deg, #FCFCFC 0%, #FCFCFC 49%, #d59cb9 100%);
@@ -67,8 +70,19 @@ const Text = styled.p`
 const InstagramConnect = ({posts}) => (
   <Container>
     <Wrapper>
-        <SectionTitle maxSize="2rem" text="Top Posts da Semana" styles={{padding: "3rem 3rem 1rem"}} />
-
+        <SectionTitle maxSize="2rem" text="DRA. MICHELE NA WEB" styles={{padding: "3rem 3rem 1rem"}} />
+        <BodyText 
+          paragraph1="
+          A Dra. Michele tem uma forte presença digital, levando o cuidado que tem com os seus pacientes para os seus seguidores nas redes sociais, 
+          publicando conteúdos exclusivos com informações médicas e dicas exclusivas para melhorar a qualidade de vida e promover a longevidade saudável. 
+          Para ela, a saúde é uma mensagem que deve ser passada adiante e um dos seus compromissos como médica é de manter o seu público bem informado na web. 
+          Siga a doutora no Instagram (dramichelesartori) e acompanhe no nosso blog os artigos especiais que a doutora e médicos convidados publicam mensalmente, 
+          com exclusividade, para os nossos internautas. Aproveite!
+          "
+          paragraph2="
+          Acompanhe a Dra. Michele nas redes sociais:
+          "
+        />
         <Row>
           {posts.map(e => (
             <InstagramCard
@@ -83,6 +97,21 @@ const InstagramConnect = ({posts}) => (
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={instagram} />
           <Text>@dramichelesartori</Text>
+        </ContainerBtn>
+
+        <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
+          <Icon src={doctoralia} />
+          <Text>@dramichelesartori Doctoralia</Text>
+        </ContainerBtn>
+
+        <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
+          <Icon src={facebook} />
+          <Text>@dramichelesartori facebook</Text>
+        </ContainerBtn>
+
+        <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
+          <Icon src={linkedin} />
+          <Text>@dramichelesartori linkedin</Text>
         </ContainerBtn>
       </Wrapper>
   </Container>

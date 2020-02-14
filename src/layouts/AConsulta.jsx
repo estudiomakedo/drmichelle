@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {SectionTitle, BodyText} from '../components';
-import runners2 from '../../static/runners2.jpg';
+import balanca from '../../static/balanca.jpg';
+import consulta from '../../static/consulta.jpg';
 
 const Container = styled.div`
 border-top: 10px solid ${props => props.theme.colors.primary.base};
@@ -149,14 +150,14 @@ const AConsulta = () => (
 
             <section className="stepImg">
               <RectBack/>
-              <RectImage src={runners2}/>
+              <RectImage src={balanca}/>
             </section>
         </Row>
 
         <Row>
           <section className="stepImg">
             <RectBackLeft/>
-            <CircleImage src={runners2}/>
+            <CircleImage src={consulta}/>
           </section>
           <section className="stepText">
           <BodyText 
@@ -170,6 +171,10 @@ const AConsulta = () => (
             />
           </section>
         </Row>
+
+        <BodyText 
+          paragraph1="Alguma dúvida? Entre em contato com os nossos canais de atendimento e saiba como marcar uma consulta com a Dra. Michele!"
+        />
       </Wrapper>
   </Container>
 
