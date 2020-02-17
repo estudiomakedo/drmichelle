@@ -16,7 +16,7 @@ const Nav = styled.nav`
   justify-content: space-evenly;
   font-family: Lato;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   align-items: center;
   width: 100%;
   max-width: ${props => props.theme.maxWidth};
@@ -24,6 +24,11 @@ const Nav = styled.nav`
   padding: 20px 0;
   top:  0;
   position: relative;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
+    font-size: 1.1rem;
+
+  }
 
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     justify-content: flex-start;
@@ -84,8 +89,8 @@ export default class NavBar extends React.Component {
       <Headroom style={{color: "white !important", position: "absolute", justifyContent: "center", backgroundColor: this.state.scrollY != 0 ? theme.colors.primary.base : 'transparent', padding: 0}} calcHeightOnResize disableInlineStyles>
         <Nav noShadow={this.state.scrollY > 0}>
           <Link to="/">Inicio</Link>
-          {/*<Link to="/blog">Blog</Link>*/}
-          <Link to="/convenios">Convenios</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/convenios">Convênios</Link>
           <Link to="/#faleconosco">Fale Conosco</Link>
         </Nav>
         

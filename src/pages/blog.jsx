@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { HeaderGradientMiddleSection, BlogListSide } from 'components';
+import { HeaderGradientMiddleSection, BlogListSide, BodyText } from 'components';
 import { Layout, ContactSection } from 'layouts';
 import GoogleFontLoader from 'react-google-font-loader';
 
@@ -20,7 +20,7 @@ const Blog = ({ data }) => {
           ]}
         />
       <HeaderGradientMiddleSection title="Blog"></HeaderGradientMiddleSection>
-      <BodyText 
+      <BodyText styles={{padding: "0 3rem", marginTop: "3rem"}}
        paragraph1="Bem-vindo ao blog da Dra. Michele Sartori! Aqui, serão publicados, mensalmente, artigos sobre os principais assuntos médicos da atualidade, 
        assinados pela própria doutora ou médicos convidados. 
        Haverá também a repercussão das principais notícias e novidades médicas do mundo, com o comentário da doutora."

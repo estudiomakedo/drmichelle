@@ -16,11 +16,11 @@ export default class BodyText extends React.Component {
   }
 
     render() {
-      const {paragraph1, paragraph2} = this.props;
+      const {paragraph1, paragraph2, styles, textStyles} = this.props;
       return (
-        <div>
-          <Text>{paragraph1}</Text>
-          <Text>{paragraph2}</Text>
+        <div style={{...styles}}>
+          <Text style={{...textStyles}}>{paragraph1}</Text>
+          <Text style={{...textStyles}}>{paragraph2}</Text>
         </div>
       );
     }
@@ -29,6 +29,8 @@ export default class BodyText extends React.Component {
   BodyText.defaultProps = {
     paragraph1:'',
     paragraph2:'',
+    styles: {},
+    textStyles: {}
   };
 
 const Text = styled.p`

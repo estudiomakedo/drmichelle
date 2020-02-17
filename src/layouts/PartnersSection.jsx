@@ -6,6 +6,7 @@ import GoogleFontLoader from 'react-google-font-loader';
 import theme from '../../config/theme';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import { Link } from 'gatsby';
 
 import {SectionTitle} from '../components';
 
@@ -114,7 +115,7 @@ export default class PartnersSection extends React.Component {
         />
             <Row>
               <CollumnText>
-                <SectionTitle maxSize="2rem" text="Convênios Aceitos (via reembolso)" />
+                <SectionTitle maxSize="2rem" text="Convênios Aceitos" />
                 <CardRow>
                   <Card>
                     <img src={amil} />
@@ -139,7 +140,9 @@ export default class PartnersSection extends React.Component {
                   </Card>
                 </CardRow>
               </CollumnText>
-              <SectionTitle styles={{display: "block", width: "100%", textAlign: "center", paddingBottom: "1rem"}} maxSize="1rem" text="Consulte tabela completa através do nosso contato" />
+              <Link to="/convenios" style={{margin: "2rem auto", display: this.props.showLink ? "block" : "none" }}>
+                <SectionTitle styles={{display: "block", width: "100%", textAlign: "center", paddingBottom: "1rem", fontSize: "1.2rem", color: theme.colors.secondary.light, fontWeight: 500}} maxSize="1rem" text="Clique aqui e acesse todas as informações" />
+              </Link>
             </Row>
             
           </Wrapper>
@@ -151,4 +154,5 @@ PartnersSection.defaultProps = {
   children: false,
   date: false,
   title: false,
+  showLink: true
 };

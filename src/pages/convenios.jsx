@@ -5,6 +5,28 @@ import PropTypes from 'prop-types';
 import { HeaderGradientMiddleSection, BodyText, SectionTitle } from 'components';
 import { Layout, ContactSection, PartnersSection } from 'layouts';
 import GoogleFontLoader from 'react-google-font-loader';
+import styled from '@emotion/styled';
+
+const Wrapper3 = styled.section`
+max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 0rem 1rem 1rem;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    padding: 0 4rem 1rem;
+  }
+`;
+
+const Wrapper2 = styled.section`
+max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 1rem 1rem 1rem;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    padding: 1rem 4rem 4rem;
+  }
+  @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
+    padding: 1rem 4rem 4rem;
+  }
+`;
 
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -20,21 +42,28 @@ const Blog = ({ data }) => {
           ]}
         />
       <HeaderGradientMiddleSection title="Convênios"></HeaderGradientMiddleSection>
-      <BodyText 
-       paragraph1="A Dra. Michele Sartori possui parcerias com alguns convênios, atendendo pacientes conveniados, obedecendo às suas respectivas políticas de reembolso. 
-       O paciente conveniado das empresas abaixo, portanto, realiza o pagamento da consulta e é reembolsado conforme as regras do seu convênio. 
-       Todos os documentos e notas referentes às consultas, para fins de comprovação junto aos convênios, são fornecidos ao paciente dentro do prazo determinado pelas 
-       normativas legais."
-      />
-      <PartnersSection/>
 
-      <SectionTitle maxSize="2rem" text="EXAMES COM O LABORATÓRIO S’AGAPO" styles={{padding: "3rem 3rem 1rem"}} />
+      <Wrapper3>
+        <BodyText styles={{ marginTop: "3rem"}}
+        paragraph1="A Dra. Michele Sartori possui parcerias com alguns convênios, atendendo pacientes conveniados, obedecendo às suas respectivas políticas de reembolso. 
+        O paciente conveniado das empresas abaixo, portanto, realiza o pagamento da consulta e é reembolsado conforme as regras do seu convênio. 
+        Todos os documentos e notas referentes às consultas, para fins de comprovação junto aos convênios, são fornecidos ao paciente dentro do prazo determinado pelas 
+        normativas legais."
+        />
+      </Wrapper3>
       
-      <BodyText
-      paragraph1="Pacientes da Dra. Michele conveniados com as empresas acima possuem a comodidade de contar com o atendimento do Laboratório S’agapo, 
-      que realiza coletas em suas residências ou em local e horário que estejam de acordo com suas agendas, facilitando e dinamizando o acompanhamento médico. 
-      Informe-se através dos nossos canais de atendimento e aproveite esse benefício!"
-      />
+        <PartnersSection showLink={false}/>
+      <Wrapper2>
+
+        <SectionTitle maxSize="2rem" text="EXAMES COM O LABORATÓRIO S’AGAPO"  />
+        
+        <BodyText
+        paragraph1="Pacientes da Dra. Michele conveniados com as empresas acima possuem a comodidade de contar com o atendimento do Laboratório S’agapo, 
+        que realiza coletas em suas residências ou em local e horário que estejam de acordo com suas agendas, facilitando e dinamizando o acompanhamento médico. 
+        Informe-se através dos nossos canais de atendimento e aproveite esse benefício!"
+        />
+      </Wrapper2>
+     
 
       <div id="faleconosco">
         <ContactSection />

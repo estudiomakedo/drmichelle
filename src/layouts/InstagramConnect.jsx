@@ -17,6 +17,9 @@ max-width: ${props => props.theme.maxWidth};
   @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
     padding: 0 0 4rem;
   }
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    padding: 4rem;
+  }
 `;
 
 const Row = styled.div`
@@ -54,6 +57,12 @@ const ContainerBtn = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
+    margin-bottom: 0;
+  }
+
 `;
 
 const Text = styled.p`
@@ -70,7 +79,7 @@ const Text = styled.p`
 const InstagramConnect = ({posts}) => (
   <Container>
     <Wrapper>
-        <SectionTitle maxSize="2rem" text="DRA. MICHELE NA WEB" styles={{padding: "3rem 3rem 1rem"}} />
+        <SectionTitle maxSize="2rem" text="DRA. MICHELE NA WEB" />
         <BodyText 
           paragraph1="
           A Dra. Michele tem uma forte presença digital, levando o cuidado que tem com os seus pacientes para os seus seguidores nas redes sociais, 
@@ -93,6 +102,7 @@ const InstagramConnect = ({posts}) => (
             />
           ))}
         </Row>
+        <Row>
 
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={instagram} />
@@ -101,18 +111,20 @@ const InstagramConnect = ({posts}) => (
 
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={doctoralia} />
-          <Text>@dramichelesartori Doctoralia</Text>
+          <Text>@dramichelesartori</Text>
         </ContainerBtn>
 
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={facebook} />
-          <Text>@dramichelesartori facebook</Text>
+          <Text>@dramichelesartori</Text>
         </ContainerBtn>
 
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={linkedin} />
-          <Text>@dramichelesartori linkedin</Text>
+          <Text>@dramichelesartori</Text>
         </ContainerBtn>
+        </Row>
+
       </Wrapper>
   </Container>
 

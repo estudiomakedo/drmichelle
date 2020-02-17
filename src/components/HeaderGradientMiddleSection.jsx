@@ -20,7 +20,6 @@ const Wrapper = styled.header`
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-  max-width: ${props => props.theme.maxWidth};
 
   &:before {
     height: 50vh;

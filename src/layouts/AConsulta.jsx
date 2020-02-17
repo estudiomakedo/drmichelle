@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {SectionTitle, BodyText} from '../components';
-import balanca from '../../static/balanca.jpg';
-import consulta from '../../static/consulta.jpg';
+import balanca from '../../static/balancaN.jpg';
+import consulta from '../../static/consultaN.jpg';
+import theme from '../../config/theme';
 
 const Container = styled.div`
-border-top: 10px solid ${props => props.theme.colors.primary.base};
 background-color: #FCFCFC;
 `;
 
@@ -13,8 +13,11 @@ const Wrapper = styled.section`
 max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 4rem 1rem 1rem;
+  @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
+    padding: 4rem;
+  }
   @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
-    padding: 0 0 4rem;
+    padding: 0 4rem;
   }
 `;
 
@@ -23,14 +26,19 @@ const Row = styled.div`
   justify-content: space-between;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 0 3rem;
   flex-wrap: wrap;
+
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
+    justify-content: space-between;
+    align-items: center;
+  }
 
   & .stepText {
     margin-bottom: 4rem;
 
     @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
-      width: 50%;
+      width: 100%;
       margin-bottom: 4rem;
     }
 
@@ -42,15 +50,44 @@ const Row = styled.div`
 
   & .stepImg {
     margin-bottom: 4rem;
+    margin: 0 auto 4rem;
 
     @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
       width: 40%;
-      margin-bottom: 4rem;
     }
 
     @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
-      width: 40%;
+      width: 45%;
+      margin: 0 0 4rem;
+
     }
+
+    @media screen and (min-width: 700px) and (max-width:  ${props => props.theme.breakpoints.l}){
+      display: none;
+    }
+  }
+`;
+
+const RowSpecial = styled.div`
+  display: none;
+  justify-content: space-between;
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 0 3rem;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 700px) and (max-width:  ${props => props.theme.breakpoints.l}){
+    width: 90%;
+    margin: 0 auto 0rem;
+    justify-content: space-around;
+    padding: 0;
+    display: flex;
+  }
+
+  & .stepImg {
+    margin-bottom: 4rem;
+
+   
   }
 `;
 
@@ -96,7 +133,7 @@ const RectBackLeft = styled.div`
 
 const RectImage = styled.img`
   height: 250px;
-  z-index: 10000;
+  z-index: 2;
   margin: 36px 0;
   position: relative;
   border: 5px solid #FCFCFC;
@@ -109,11 +146,16 @@ const RectImage = styled.img`
   @media screen and (min-width: 1024px){
     margin-top: 42px
   }
+
+  @media screen and (max-width:  ${props => props.theme.breakpoints.s}){
+    width: 100%;
+    margin: 0 auto 4rem;
+  }
 `
 
 const CircleImage = styled.img`
   height: 250px;
-  z-index: 10000;
+  z-index: 2;
   margin: 36px 0;
   position: relative;
   border: 5px solid #FCFCFC;
@@ -133,7 +175,7 @@ const CircleImage = styled.img`
 const AConsulta = () => (
   <Container>
     <Wrapper>
-        <SectionTitle maxSize="2rem" text="A consulta com a Dra. Michele" styles={{padding: "3rem 3rem 1rem"}} />
+        <SectionTitle maxSize="2rem" text="A consulta com a Dra. Michele" styles={{marginTop: "2rem"}} />
 
         <Row>
           <section className="stepText">
@@ -154,12 +196,24 @@ const AConsulta = () => (
             </section>
         </Row>
 
+        <RowSpecial>
+
+          <section className="stepImg">
+              <RectBack/>
+              <RectImage src={balanca}/>
+            </section>
+          <section className="stepImg">
+            <RectBackLeft/>
+            <CircleImage src={consulta}/>
+          </section>
+        </RowSpecial>
+
         <Row>
           <section className="stepImg">
             <RectBackLeft/>
             <CircleImage src={consulta}/>
           </section>
-          <section className="stepText">
+          <section className="stepText" style={{marginBottom: 0}}>
           <BodyText 
               paragraph1="
               A partir disso, é feito o exame de bioimpedância, que já está incluso na consulta, através do qual é medida a composição corporal do paciente. 
@@ -172,7 +226,7 @@ const AConsulta = () => (
           </section>
         </Row>
 
-        <BodyText 
+        <BodyText styles={{maxWidth: "650px", margin: "0 auto"}} textStyles={{color: theme.colors.primary.base, fontWeight: 600, textAlign: "center"}}
           paragraph1="Alguma dúvida? Entre em contato com os nossos canais de atendimento e saiba como marcar uma consulta com a Dra. Michele!"
         />
       </Wrapper>

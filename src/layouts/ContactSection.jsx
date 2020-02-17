@@ -78,7 +78,7 @@ const MapsContainer = styled.div`
 `;
 
 const Address = styled.p`
-  margin: 5px 0 5px 1rem;
+  margin: 5px auto 5px;
   color: #fff;
   font-size: 18px;
   text-align: center;
