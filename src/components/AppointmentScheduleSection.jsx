@@ -194,9 +194,9 @@ export default class HeaderGradientSection extends React.Component {
             <SectionTitle text="Quem é a Dra. Michele?" />
             <BodyText 
               paragraph1="
-              A Dra. Michele Sartori é natural de xxxxxxx, graduada em medicina há 9 anos, 
-              pela Universidade xxxxxxxxxx, com pós-graduação em Dermatologia Estética (INSTITUIÇÃO), 
-              Medicina Preventiva (INSTITUIÇÃO) e Ciências da Longevidade Humana (INSTITUIÇÃO). 
+              A Dra. Michele Sartori é natural de São Paulo, graduada em medicina há 9 anos, 
+              pela UFC - Universidade Federal do Ceará, com pós-graduação em Dermatologia Estética pela Faculdade ISMD-SP, 
+              Medicina Preventiva pela Escola de Saúde Pública (Fortaleza - CE) e Ciências da Longevidade Humana Grupo Longevidade Saudável - SP. 
               A escolha da profissão se deu pelo apreço que tinha, desde cedo, pelo cuidado e atenção à pessoa humana, o que a fez se enveredar pelos estudos da vida e 
               longevidade saudável, sendo o seu enfoque profissional a área da Medicina Integrativa com vistas a promover a Longevidade Saudável de seus pacientes.
               "

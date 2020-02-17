@@ -109,7 +109,7 @@ const InstagramConnect = ({posts}) => (
           <Text>@dramichelesartori</Text>
         </ContainerBtn>
 
-        <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
+        {/*<ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={doctoralia} />
           <Text>@dramichelesartori</Text>
         </ContainerBtn>
@@ -122,7 +122,7 @@ const InstagramConnect = ({posts}) => (
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">
           <Icon src={linkedin} />
           <Text>@dramichelesartori</Text>
-        </ContainerBtn>
+          </ContainerBtn>*/}
         </Row>
 
       </Wrapper>

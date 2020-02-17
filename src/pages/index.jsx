@@ -39,30 +39,7 @@ const PostContainer = styled.div`
   }
 `;
 
-
-
-const Index = ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
-  console.log(data);
-  return (
-    <Layout>
-      <GoogleFontLoader
-          fonts={[
-              {
-                font: 'Lato',
-                weights: [400, 500,],
-              },
-          ]}
-        />
-      <Helmet title={'Home Page'} />
-      <HeaderGradientSection />
-      <div id="knowbetter">
-        <AppointmentScheduleSection />
-      </div>
-      <OurSpecialitySection />
-      
-      <AConsulta/>
-
+/*
       <PostOuterContainer>
         <PostContainer>
           <SectionTitle maxSize="2rem" text="Acompanhe os nossos últimos posts" />
@@ -86,7 +63,31 @@ const Index = ({ data }) => {
             <RoundButton styles={{maxWidth: "200px", margin: "1rem auto 2rem"}} text="VER TUDO" />
           </Link>
         </PostContainer>
-          </PostOuterContainer>
+      </PostOuterContainer>
+*/
+
+const Index = ({ data }) => {
+  const { edges } = data.allMarkdownRemark;
+  console.log(data);
+  return (
+    <Layout>
+      <GoogleFontLoader
+          fonts={[
+              {
+                font: 'Lato',
+                weights: [400, 500,],
+              },
+          ]}
+        />
+      <Helmet title={'Home Page'} />
+      <HeaderGradientSection />
+      <div id="knowbetter">
+        <AppointmentScheduleSection />
+      </div>
+      <OurSpecialitySection />
+      
+      <AConsulta/>
+
       <InstagramConnect posts={data.allInstagramContent.edges} />
       <PartnersSection/>
 

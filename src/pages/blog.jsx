@@ -26,7 +26,10 @@ const Blog = ({ data }) => {
        Haverá também a repercussão das principais notícias e novidades médicas do mundo, com o comentário da doutora."
       />
 
-      {edges.map(({ node }) => (
+      <BodyText textStyles={{fontWeight: "600", width: "100%", textAlign: "center"}} styles={{margin: "3rem auto"}}
+       paragraph1="Novos Posts em breve"
+      />
+      {/*edges.map(({ node }) => (
         <BlogListSide
           key={node.id}
           cover={node.frontmatter.cover.childImageSharp.fluid}
@@ -36,7 +39,7 @@ const Blog = ({ data }) => {
           tags={node.frontmatter.tags}
           excerpt={node.excerpt}
         />
-      ))}
+      ))*/}
     </Layout>
   );
 };

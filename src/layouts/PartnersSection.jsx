@@ -140,8 +140,8 @@ export default class PartnersSection extends React.Component {
                   </Card>
                 </CardRow>
               </CollumnText>
-              <Link to="/convenios" style={{margin: "2rem auto", display: this.props.showLink ? "block" : "none" }}>
-                <SectionTitle styles={{display: "block", width: "100%", textAlign: "center", paddingBottom: "1rem", fontSize: "1.2rem", color: theme.colors.secondary.light, fontWeight: 500}} maxSize="1rem" text="Clique aqui e acesse todas as informações" />
+              <Link to="/convenios" style={{margin: "1rem auto 0", display: this.props.showLink ? "block" : "none" }}>
+                <SectionTitle styles={{display: "block", width: "100%", textAlign: "center", fontSize: "1.2rem", color: theme.colors.secondary.light, fontWeight: 500}} maxSize="1rem" text="Clique aqui e acesse todas as informações" />
               </Link>
             </Row>
             

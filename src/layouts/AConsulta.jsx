@@ -14,7 +14,7 @@ max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 4rem 1rem 1rem;
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
-    padding: 4rem;
+    padding: 0 4rem 4rem;
   }
   @media screen and (min-width:  ${props => props.theme.breakpoints.l}){
     padding: 0 4rem;
