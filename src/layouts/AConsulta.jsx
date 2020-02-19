@@ -12,7 +12,7 @@ background-color: #FCFCFC;
 const Wrapper = styled.section`
 max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
-  padding: 4rem 1rem 1rem;
+  padding: 0rem 1rem 1rem;
   @media screen and (min-width:  ${props => props.theme.breakpoints.m}){
     padding: 0 4rem 4rem;
   }
@@ -35,7 +35,7 @@ const Row = styled.div`
   }
 
   & .stepText {
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
 
     @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
       width: 100%;

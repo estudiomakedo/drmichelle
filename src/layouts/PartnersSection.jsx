@@ -66,11 +66,11 @@ const Card = styled.div`
   border-radius: 20px;
   padding: 15px;
   margin: 15px 15px 20px;
-  width: 150px;
+  width: 120px;
   @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
     margin-bottom: 0;
     max-width: 300px;
-
+    width: 150px;
   }
 
   & img {

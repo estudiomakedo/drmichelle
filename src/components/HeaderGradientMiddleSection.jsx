@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 import cover from '../../static/photos/cover.jpeg'
 import runners from '../../static/blog.jpg';
+import runnerss from '../../static/blogs.jpg';
 import green from '../../static/green.png'
 import blue from '../../static/blue.png'
 import RoundButton from './RoundButton';
@@ -16,10 +17,18 @@ import { Link } from 'gatsby';
 
 const Wrapper = styled.header`
   height: 50vh;
-  background: url(${runners});
+  background: url(${runnerss});
   background-size: cover;
   background-position: center;
   margin: 0 auto;
+
+  @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
+    background: url(${runners});
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  }
+
 
   &:before {
     height: 50vh;
@@ -30,8 +39,10 @@ const Wrapper = styled.header`
     bottom: 50vh;
     left: 0;
     opacity: 0.7;
-    background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, #7986711A 49%, ${props => props.theme.colors.secondary.base} 100%);
-
+    background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, #7986711A 15%, #7986711A 85%, ${props => props.theme.colors.secondary.base} 100%);
+    @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
+      background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, #7986711A 49%, ${props => props.theme.colors.secondary.base} 100%);
+    }
   }
 `;
 
