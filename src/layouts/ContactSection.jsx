@@ -42,6 +42,21 @@ const ContactItem = styled.div`
   margin: 1rem 0;
 `;
 
+const ContactItemCliclable = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer
+`;
+
+const ContactTextCliclable = styled.p`
+  margin: 0 0 0 1rem;
+  color: #7F7F7F !important;
+  text-decoration: underline !important;
+  font-size: 18px;
+
+`;
+
 const ContactText = styled.p`
   margin: 0 0 0 1rem;
   color: #7F7F7F !important;
@@ -94,6 +109,10 @@ const ImageContainer = styled.div`
   }
 `;
 
+const generateWhatsappMessage = () => {
+  window.open(`https://wa.me/5511981466365`)
+}
+
 const ContactSection = () => (
   <Wrapper>
     <Row>
@@ -105,12 +124,12 @@ const ContactSection = () => (
             atendimento@dramichelesartori.com
           </ContactText>
         </ContactItem>
-        <ContactItem>
+        <ContactItemCliclable onClick={() => generateWhatsappMessage()}>
           <Icon src={phone} />
-          <ContactText>
+          <ContactTextCliclable>
             (11) 98146-6365
-          </ContactText>
-        </ContactItem>
+          </ContactTextCliclable>
+        </ContactItemCliclable>
         <MapsWrapper>
           <MapsContainer>
             <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}

@@ -39,9 +39,9 @@ const Wrapper = styled.header`
     bottom: 50vh;
     left: 0;
     opacity: 0.7;
-    background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, #7986711A 15%, #7986711A 85%, ${props => props.theme.colors.secondary.base} 100%);
+    background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, rgba(255,255,255, 0.3) 25%, rgba(220,220,220, 0.7) 55%, ${props => props.theme.colors.secondary.base} 100%);
     @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
-      background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, #7986711A 49%, ${props => props.theme.colors.secondary.base} 100%);
+      background-image: linear-gradient(119deg, ${props => props.theme.colors.primary.base} 0%, rgba(255,255,255, 0.3) 49%, ${props => props.theme.colors.secondary.base} 100%);
     }
   }
 `;
@@ -155,7 +155,12 @@ const StyledLink = styled(Link)`
 `;
 
 const Logo = styled.img`
-  max-width: 350px;
+  max-width: 300px;
+
+  @media screen and (min-width:  ${props => props.theme.breakpoints.s}){
+    max-width: 350px;
+
+  }
 `;
 
 const HeaderGradientMiddleSection = ({ children, title, date }) => (
