@@ -110,7 +110,8 @@ const ImageContainer = styled.div`
 `;
 
 const generateWhatsappMessage = () => {
-  window.open(`https://wa.me/5511981466365`)
+  let text = "Olá! Obrigada por entrar em contato! Gostaria de marcar uma consulta com a Dra. Michele Sartori?"
+  window.open(`https://wa.me/5511981466365?text=${encodeURIComponent(text)}`)
 }
 
 const ContactSection = () => (
