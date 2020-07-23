@@ -122,7 +122,7 @@ const ContactSection = () => (
         <ContactItem>
           <Icon src={email} />
           <ContactText>
-            atendimento@dramichelesartori.com
+            atendimento@dramichelesartori.com.br
           </ContactText>
         </ContactItem>
         <ContactItemCliclable onClick={() => generateWhatsappMessage()}>
