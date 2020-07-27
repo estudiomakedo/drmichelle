@@ -89,6 +89,7 @@ const Index = ({ data }) => {
       <AConsulta/>
 
       {/*<InstagramConnect posts={data.allInstagramContent.edges} />*/}
+      <InstagramConnect posts={[]} />
       <PartnersSection/>
 
       {/*<ClientComments />*/}
