@@ -122,7 +122,7 @@ const ContactSection = () => (
         <ContactItem>
           <Icon src={email} />
           <ContactText>
-            atendimento@dramichelesartori.com
+            atendimento@dramichelesartori.com.br
           </ContactText>
         </ContactItem>
         <ContactItemCliclable onClick={() => generateWhatsappMessage()}>
@@ -134,8 +134,8 @@ const ContactSection = () => (
         <MapsWrapper>
           <MapsContainer>
             <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
-              frameborder="0"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=duarte+de+azevedo+448+santana+SP" allowfullscreen>
+              frameBorder="0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=duarte+de+azevedo+448+santana+SP" allowFullScreen>
             </iframe>
             <Address>CLÍNICA SAÚDE INTEGRAL​​</Address>
             <Address>Rua Duarte de Azevedo, 448, Conj 121 - Santana, SP</Address>
@@ -143,7 +143,7 @@ const ContactSection = () => (
           <MapsContainer>
             <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
               frameborder="0"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=presidente+juscelino+kubitschek+1545+vila+nova+conceicao+SP" allowfullscreen>
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=presidente+juscelino+kubitschek+1545+vila+nova+conceicao+SP" allowFullScreen>
             </iframe>
             <Address>CLÍNICA SAGAPO​​</Address>
             <Address>Av. Pres. Juscelino Kubitschek, 1545 - Vila Nova Conceição, SP</Address>

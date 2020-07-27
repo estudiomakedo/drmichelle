@@ -88,7 +88,7 @@ const Index = ({ data }) => {
       
       <AConsulta/>
 
-      <InstagramConnect posts={data.allInstagramContent.edges} />
+      {/*<InstagramConnect posts={data.allInstagramContent.edges} />*/}
       <PartnersSection/>
 
       {/*<ClientComments />*/}
@@ -119,7 +119,7 @@ Index.propTypes = {
         }).isRequired
       ),
     }),
-    allInstagramContent: PropTypes.shape({
+    /*allInstagramContent: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -136,7 +136,7 @@ Index.propTypes = {
           }),
         }).isRequired
       ),
-    })
+    })*/
   }),
 };
 
@@ -167,22 +167,6 @@ export const query = graphql`
               }
             }
           }
-        }
-      }
-    }
-    allInstagramContent(limit: 4) {
-      edges {
-        node {
-          id
-          caption {
-            text
-          }
-          images {
-            standard_resolution {
-              url
-            }
-          }
-          link
         }
       }
     }
