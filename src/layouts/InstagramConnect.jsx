@@ -92,16 +92,16 @@ const InstagramConnect = ({posts}) => (
           Acompanhe a Dra. Michele nas redes sociais:
           "
         />
-        {/*<Row>
+        {<Row>
           {posts.map(e => (
             <InstagramCard
-              key={e.node.id}
-              text={e.node.caption.text}
-              imgUrl={e.node.images.standard_resolution.url}
-              link={e.node.link}
+              key={e.id}
+              text={e.text}
+              imgUrl={e.url}
+              link={e.link}
             />
           ))}
-          </Row>*/}
+          </Row>}
         <Row>
 
         <ContainerBtn href={"https://www.instagram.com/dramichelesartori"} target="__blank">

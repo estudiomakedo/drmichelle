@@ -12,6 +12,11 @@ import { Layout, InstagramConnect, ContactSection, PartnersSection, AConsulta } 
 import { Link } from 'gatsby';
 import GoogleFontLoader from 'react-google-font-loader';
 
+import insta1 from '../../static/insta/1.jpg';
+import insta2 from '../../static/insta/2.jpg';
+import insta3 from '../../static/insta/3.jpg';
+import insta4 from '../../static/insta/4.jpg';
+
 const PostWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -89,7 +94,12 @@ const Index = ({ data }) => {
       <AConsulta/>
 
       {/*<InstagramConnect posts={data.allInstagramContent.edges} />*/}
-      <InstagramConnect posts={[]} />
+      <InstagramConnect posts={[
+        {id: 1, url:insta1, link:"https://www.instagram.com/p/CFIw1e_BGPE/", text: "Suplementar ou não suplementar? Eis a questão que não sai da mente de muitos pacientes, mas que só deve ser respondida, tendo como base dados importantes sobre a saúde como um todo, obtidos por meio de exames clínicos e laboratoriais, como também a meta que você quer atingir..."},
+        {id: 2, url:insta2, link:"https://www.instagram.com/p/CFHlVtrhWvC/", text: "No consultório muitas pessoas me perguntam se trabalho como,nutróloga,endócrino ou médica do esporte,outros questionam se é como ortomolecular..."},
+        {id: 3, url:insta3, link:"https://www.instagram.com/p/CFAwl2OhatX/", text: "Viver e não ter a vergonha de pedir ajuda, quando as coisas não vão bem..."},
+        {id: 4, url:insta4, link:"https://www.instagram.com/p/CEjgP2jhRhG/", text: "A nutrição é um dos caminhos pelos quais se alcança diversos objetivos na saúde. E eu não poderia deixar essa data passar em branco, sem agradecer e parabenizar os nutricionistas..."},
+        ]} />
       <PartnersSection/>
 
       {/*<ClientComments />*/}
