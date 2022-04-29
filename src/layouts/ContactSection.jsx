@@ -111,7 +111,7 @@ const ImageContainer = styled.div`
 
 const generateWhatsappMessage = () => {
   let text = "Olá! Obrigada por entrar em contato! Gostaria de marcar uma consulta com a Dra. Michele Sartori?"
-  window.open(`https://wa.me/5511981466365?text=${encodeURIComponent(text)}`)
+  window.open(`https://wa.me/5511939277280?text=${encodeURIComponent(text)}`)
 }
 
 const ContactSection = () => (
@@ -128,18 +128,18 @@ const ContactSection = () => (
         <ContactItemCliclable onClick={() => generateWhatsappMessage()}>
           <Icon src={phone} />
           <ContactTextCliclable>
-            (11) 98146-6365
+            (11) 93927-7280
           </ContactTextCliclable>
         </ContactItemCliclable>
         <MapsWrapper>
-          <MapsContainer>
+            {/*<MapsContainer>
             <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
               frameBorder="0"
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdi4vU2QNAh0TR18rrtVxWOwm0D_yS6qM&q=duarte+de+azevedo+448+santana+SP" allowFullScreen>
             </iframe>
             <Address>CLÍNICA SAÚDE INTEGRAL​​</Address>
             <Address>Rua Duarte de Azevedo, 448, Conj 121 - Santana, SP</Address>
-          </MapsContainer>
+          </MapsContainer>*/}
           <MapsContainer>
             <iframe id="maps" style={{width: '100%', height: '14em', margin: 0}}
               frameborder="0"
