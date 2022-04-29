@@ -95,10 +95,10 @@ const Index = ({ data }) => {
 
       {/*<InstagramConnect posts={data.allInstagramContent.edges} />*/}
       <InstagramConnect posts={[
-        {id: 1, url:insta1, link:"https://www.instagram.com/p/CFIw1e_BGPE/", text: "Suplementar ou não suplementar? Eis a questão que não sai da mente de muitos pacientes, mas que só deve ser respondida, tendo como base dados importantes sobre a saúde como um todo, obtidos por meio de exames clínicos e laboratoriais, como também a meta que você quer atingir..."},
-        {id: 2, url:insta2, link:"https://www.instagram.com/p/CFHlVtrhWvC/", text: "No consultório muitas pessoas me perguntam se trabalho como,nutróloga,endócrino ou médica do esporte,outros questionam se é como ortomolecular..."},
-        {id: 3, url:insta3, link:"https://www.instagram.com/p/CFAwl2OhatX/", text: "Viver e não ter a vergonha de pedir ajuda, quando as coisas não vão bem..."},
-        {id: 4, url:insta4, link:"https://www.instagram.com/p/CEjgP2jhRhG/", text: "A nutrição é um dos caminhos pelos quais se alcança diversos objetivos na saúde. E eu não poderia deixar essa data passar em branco, sem agradecer e parabenizar os nutricionistas..."},
+        {id: 1, url:insta1, link:"https://www.instagram.com/p/Ccipp3DOO6b/", text: "Doutora estou percebendo que minhas medidas estão diminuindo, mas meu peso na balança não está mudando...."},
+        {id: 2, url:insta2, link:"https://www.instagram.com/p/CcqPIQkOg-f/", text: "Quem tem hipotireoidismo deve evitar bebida alcoólica, porque o álcool pode influenciar na função da tireoide e reduzir os hormônios T3 e T4, que regulam a tireoide...."},
+        {id: 3, url:insta3, link:"https://www.instagram.com/p/CcEGm4Cu2RI/", text: "3 importantes benéficos da proteína no processo de emagrecimento..."},
+        {id: 4, url:insta4, link:"https://www.instagram.com/p/CcS6PoCuKmm/", text: "O que é mais importante, dieta ou exercício físico?..."},
         ]} />
       <PartnersSection/>
 
