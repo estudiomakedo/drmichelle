@@ -60,12 +60,6 @@ module.exports = {
         icon: config.favicon,
       },
     },
-    /*{
-      resolve: `gatsby-source-instagram-all`,
-      options: {
-        access_token: "328558353.1677ed0.8f57b249a4cb40118fe376790ebb7960"
-      }
-    },*/
     'gatsby-plugin-offline',
   ],
 };
