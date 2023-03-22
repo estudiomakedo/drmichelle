@@ -100,7 +100,7 @@ const Index = ({ data }) => {
         {id: 3, url:insta3, link:"https://www.instagram.com/p/CcEGm4Cu2RI/", text: "3 importantes benéficos da proteína no processo de emagrecimento..."},
         {id: 4, url:insta4, link:"https://www.instagram.com/p/CcS6PoCuKmm/", text: "O que é mais importante, dieta ou exercício físico?..."},
         ]} />
-      <PartnersSection/>
+      {/*<PartnersSection/>*/}
 
       {/*<ClientComments />*/}
       <div id="faleconosco">
