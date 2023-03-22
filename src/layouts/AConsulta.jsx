@@ -216,7 +216,7 @@ const AConsulta = () => (
           <section className="stepText" style={{marginBottom: 0}}>
           <BodyText 
               paragraph1="
-              A partir disso, é feito o exame de bioimpedância, que já está incluso na consulta, através do qual é medida a composição corporal do paciente. 
+              A partir disso, é feito o exame de bioimpedância, através do qual é medida a composição corporal do paciente. 
               Tendo em mãos os dados de massa corporal, metabolismo basal e índice de gordura, são relacionados os números com o que foi compartilhado através da conversa, 
               explicando a relação entre o que está escrito no resultado desse exame preliminar e as suas principais queixas. Gradativamente, as metas iniciais vão 
               sendo traçadas e são solicitados os exames complementares para que o(a) paciente possa ter plena consciência corporal antes de iniciar os protocolos e tratamentos adequados. E assim, 
