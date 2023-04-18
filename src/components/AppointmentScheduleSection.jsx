@@ -202,8 +202,8 @@ export default class HeaderGradientSection extends React.Component {
               "
               paragraph2="
               Sua trajetória acadêmica engloba especializações e aperfeiçoamentos voltados à prática da Medicina Integrativa, focalizando emagrecimento saudável, 
-              longevidade, manutenção da qualidade de vida, tratamentos hormonais e metabólicos e prevenção de doenças, 
-              com referências na área, como o Dr. Lair Ribeiro, Dr. Italo Rachid, Dr. Victor Sorrentino, Dr. Fernando Filho, Dr. Willy Mathias entre outros."
+              longevidade, manutenção da qualidade de vida, tratamentos hormonais e metabólicos, prevenção de doenças e com o tempo, ela acabou virando referência em mulheres no climatério e menopausa.
+              Sempre buscando conhecimento na área, a Dra. Michele Sartori tem como referências o Dr. Lair Ribeiro, Dr. Italo Rachid, Dr. Victor Sorrentino, Dr. Fernando Filho, Dr. Willy Mathias, Luciano Bueno entre outros."
             />
           </CollumnText>
           <CollumnAppointment>

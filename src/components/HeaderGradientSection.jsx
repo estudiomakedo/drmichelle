@@ -280,8 +280,9 @@ const HeaderGradientSection = ({ children, title, date }) => (
     <Text>
       <PositiveMessage>Medicina</PositiveMessage>
       <PositiveMessage>Preventiva,</PositiveMessage> 
-      <PositiveMessage>Emagrecimento e</PositiveMessage> 
-      <PositiveMessage>Longevidade Saudável</PositiveMessage>
+      <PositiveMessage>Emagrecimento,</PositiveMessage> 
+      <PositiveMessage>Menopausa e</PositiveMessage>
+      <PositiveMessage>Longevidade</PositiveMessage>
       <DisplayNone>
         <Link to="/#knowbetter">
           <RoundButton text="CONHEÇA" />
